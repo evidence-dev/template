@@ -4,7 +4,7 @@ Thank you for checking out Evidence. This is the project template that you shoul
 
 ## Getting Started
 
-Check out the [documentation](https://readme.evidence.dev) for a complete walk through.
+Check out the [documentation](https://docs.evidence.dev) for a complete walk through.
 
 ```
 npx degit evidence-dev/template my-new-project
