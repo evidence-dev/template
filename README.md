@@ -6,7 +6,7 @@ Thank you for checking out Evidence. This is the project template that you shoul
 
 Check out the [documentation](https://readme.evidence.dev) for a complete walk through.
 
-```npm
+```
 npx degit evidence-dev/template my-new-project
 cd my-new-project 
 npm install 
