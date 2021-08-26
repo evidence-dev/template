@@ -18,7 +18,7 @@ select
 
 ## Nice Job
 
-Now that you have connected your data warehouse, head on over to the [example analysis](/example) to see more of what evidence can do.
+Now that you have connected your data warehouse, head on over to the [docs](https://docs.evidence.dev) to see more of what evidence can do.
 
 This section of the report only becomes visible once there is a row of data in my_first_query. You can use conditionals to keep your reports focused while still covering a wide variety of situations.
 
