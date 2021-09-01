@@ -30,7 +30,7 @@ Visit <a href="https://docs.evidence.dev/getting-started/connect-data-warehouse"
 
 * <a href="https://docs.evidence.dev/getting-started/connect-data-warehouse#bigquery" target="_blank">Connect BigQuery</a>
 * <a href="https://docs.evidence.dev/getting-started/connect-data-warehouse#snowflake" target="_blank">Connect Snowflake</a>
-* <a href="https://docs.evidence.dev/getting-started/connect-data-warehouse#postgres" target="_blank">Connect PostgreSQL</a>
+* <a href="https://docs.evidence.dev/getting-started/connect-data-warehouse#postgresql" target="_blank">Connect PostgreSQL</a>
 
 
 {/if}
