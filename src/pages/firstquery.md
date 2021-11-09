@@ -18,7 +18,7 @@ select
 
 ## Nice Job
 
-Now that you have connected your data warehouse, head on over to the [example analysis](/example) to see more of what evidence can do.
+Now that you have connected your data warehouse, head on over to the [docs](https://docs.evidence.dev) to see more of what evidence can do.
 
 This section of the report only becomes visible once there is a row of data in my_first_query. You can use conditionals to keep your reports focused while still covering a wide variety of situations.
 
@@ -30,7 +30,7 @@ Visit <a href="https://docs.evidence.dev/getting-started/connect-data-warehouse"
 
 * <a href="https://docs.evidence.dev/getting-started/connect-data-warehouse#bigquery" target="_blank">Connect BigQuery</a>
 * <a href="https://docs.evidence.dev/getting-started/connect-data-warehouse#snowflake" target="_blank">Connect Snowflake</a>
-* <a href="https://docs.evidence.dev/getting-started/connect-data-warehouse#postgres" target="_blank">Connect PostgreSQL</a>
+* <a href="https://docs.evidence.dev/getting-started/connect-data-warehouse#postgresql" target="_blank">Connect PostgreSQL</a>
 
 
 {/if}
