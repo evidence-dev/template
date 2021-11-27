@@ -129,7 +129,7 @@ hr {
 	}
 }
 
-/* GLOBAL COLOR VARIABLES - USED IN MULTI-SERIES CHARTS */
+
 :root {
 	--color1: #923d59;
 	--color2: #488f96;
@@ -205,7 +205,3 @@ hr {
 	--yellow-999: hsla(15, 86%, 30%, 1);
 	
 }
-
-/* Idea for multiple color palettes: naming convention after --.
-For example: --gradient1 --gradient2 | --standard1 --standard2, etc.
-*/
