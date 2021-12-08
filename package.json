@@ -8,6 +8,6 @@
   },
   "type": "module",
   "dependencies": {
-    "@evidence-dev/evidence": "^0.1.5"
+    "@evidence-dev/evidence": "^0.1.7"
   }
 }
