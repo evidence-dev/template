@@ -6,6 +6,10 @@
     "build": "svelte-kit build",
     "preview": "svelte-kit preview"
   },
+  "engines": {
+    "npm": ">=6.0.0",
+    "node": ">=14.0.0"
+  },
   "type": "module",
   "dependencies": {
     "@evidence-dev/evidence": "^0.1.10"
