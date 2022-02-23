@@ -1,5 +1,5 @@
 {
-	"keyFilename": "./.evidence/XXXXXXXXXX.json",
-	"projectId": "XXXXXXXXX",
+	"keyFilename": "./.evidence/YOUR-JSON-KEY.json",
+	"projectId": "YOUR-PROJECT-ID",
 	"location": "US"
 }
