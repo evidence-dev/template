@@ -12,6 +12,6 @@
   },
   "type": "module",
   "dependencies": {
-    "@evidence-dev/evidence": "^1.0.0-next.0"
+    "@evidence-dev/evidence": "^1.0.0"
   }
 }
