@@ -7,7 +7,7 @@ You can edit the content of this page by opening **`pages/index.md`** in an edit
 
 # Steps to get started
 ## [1. Connect your database &rarr;](/settings)
-## [2. Start building with Evidence &rarr;](/1.-getting-started)
+## [2. Start building with Evidence &rarr;](/getting-started)
 
 # Resources
 ## [Star our GitHub repo &rarr;](https://github.com/evidence-dev/evidence)
