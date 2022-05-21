@@ -360,7 +360,7 @@ select "Southwest" as country, 110 as value
 
 
 ## More
-Check out the [Evidence Docs](https://docs.evidence.dev/components/examples) for more chart examples.
+Check out the [Evidence Docs](https://docs.evidence.dev/features/charts/examples) for more chart examples.
 
 # Tables & Text
 
