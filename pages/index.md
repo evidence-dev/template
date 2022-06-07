@@ -5,9 +5,10 @@ This is the home page for your project. Navigate to this page by clicking the Ev
 
 You can edit the content of this page by opening **`pages/index.md`** in an editor.
 
-# Steps to get started
-## [1. Connect your database &rarr;](/settings)
-## [2. Start building with Evidence &rarr;](/getting-started)
+# Options to get started
+
+## [1. Try Evidence with demo data &rarr;](https://docs.evidence.dev/tutorial/introduction)
+## [2. Connect your own database &rarr;](/settings)
 
 # Resources
 ## [Star our GitHub repo &rarr;](https://github.com/evidence-dev/evidence)
