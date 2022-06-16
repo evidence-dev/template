@@ -11,11 +11,11 @@ When you are in development mode (running your project locally), queries are sho
 In either case, you (or your audience) can hide or show queries using the button up to the right.
 
 ```simple_query
-select "orange" as name, 100 as number
+select 'orange' as name, 100 as number
 union all
-select "banana" as name, 200 as number
+select 'banana' as name, 200 as number
 union all
-select "apple" as name, 300 as number
+select 'apple' as name, 300 as number
 ```
 
 ## Including Data in Text
@@ -31,7 +31,7 @@ For example, we can query the results of the simple query from above:
 
 ```subquery
 select * from ${simple_query}
-where name = "apple"
+where name = 'apple'
 ```
 
 ## [See how to use the data from your queries &rarr;](/getting-started/using-query-results)
