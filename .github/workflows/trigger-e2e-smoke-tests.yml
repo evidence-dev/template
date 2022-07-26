@@ -8,6 +8,6 @@ jobs:
         uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.E2E_SMOKE_TESTS_REPO_ACCESS_TOKEN }}
-          repository: evidence-dev/e2e-tests
+          repository: evidence-dev/e2e-smoke-tests
           event-type: template-project-update
           client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}", "source":"evidence-dev/template"}'
