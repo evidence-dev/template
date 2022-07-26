@@ -1,6 +1,6 @@
 [
 	{
 		"action": "remove",
-		"files": [".github/workflows/"]
+		"files": [".github"]
 	}
 ]
