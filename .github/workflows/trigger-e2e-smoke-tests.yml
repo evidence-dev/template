@@ -1,5 +1,8 @@
 name: Trigger Evidence e2e smoke tests
-on: [push]
+on:
+  push:
+    branches:
+      - main
 jobs:
   dispatch:
     runs-on: ubuntu-latest
