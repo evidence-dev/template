@@ -1,36 +1,3 @@
-<!-- ToDo 
-- Gifs of some of the visual tasks
-- component gallery?
-- shoirten links in final section
-- get in value component - bigvalue?
-- 👉 this number is from a query
-- telemetry - collapse
-- Feature -> Feature Reference
-
-
-
-
-
-
-Later
-Take proper review of other docs:
-streamlit, electron, looker, hex
-
-Collapse all components into one main section 
-- Markdown
-- SQL
-- reindex search
-
-## Docs notes
-- markdown specs
--components - searchable, referencey
--->
-
-
-
-
-
-
 # Welcome to Evidence! 👋
 Evidence enables analysts to deliver a polished business intelligence system using SQL & markdown.
 
