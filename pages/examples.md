@@ -76,6 +76,9 @@
     select '2020-12-31' as year, 'UK' as country, 25800000 as sales_usd
     union all
     select '2021-12-31' as year, 'UK' as country, 28800000 as sales_usd
+
+    order by year, country
+    
 ```
 
 # Charts
@@ -89,6 +92,7 @@
     title='Sales by Country'
     subtitle='$ in USD'
     yAxisTitle='annual sales'
+    sort=false
 />
 
 ## Area Chart
@@ -97,6 +101,7 @@
     x=year
     y=sales_usd
     series=country
+    sort=false
 />
 
 ## Stacked Bar Chart
@@ -105,6 +110,7 @@
     x=year
     y=sales_usd
     series=country
+    sort=false
 />
 
 ## Grouped Bar Chart
@@ -114,6 +120,7 @@
     y=sales_usd
     series=country
     type=grouped
+    sort=false
 />
 
 ## Horizontal Bar Chart
@@ -373,11 +380,52 @@ Check out the [Evidence Docs](https://docs.evidence.dev/features/charts/examples
 ## Text
 
 ```us_sales
-select *
+select 
+year, country, sales_usd as sales_usd0m
 from ${intro} 
 where country = 'US'
 order by year desc
 ```
 
-US sales in the most recent year (<Value data={data.us_sales} column=year/>) were <Value data={data.us_sales} column=sales_usd />
 
+US sales in the most recent year (<Value data={us_sales} column=year/>) were <Value data={us_sales} column=sales_usd0m />
+
+## Big Value
+
+```uk_sales
+select 
+year, country, sales_usd as sales_usd0m
+from ${intro} 
+where country = 'UK'
+order by year desc
+```
+
+```canada_sales
+select 
+year, country, sales_usd as sales_usd0m
+from ${intro} 
+where country = 'Canada'
+order by year desc
+```
+
+
+<BigValue
+    title="US Sales"
+    data={us_sales}
+    value=sales_usd0m
+    sparkline=year
+/>
+
+<BigValue
+    title="UK Sales"
+    data={uk_sales}
+    value=sales_usd0m
+    sparkline=year
+/>
+
+<BigValue
+    title="Canada Sales"
+    data={canada_sales}
+    value=sales_usd0m
+    sparkline=year
+/>
