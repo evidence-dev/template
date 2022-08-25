@@ -6,7 +6,7 @@ Evidence pages are just markdown files. The file for this page is:
 
 `[my-project]/pages/index.md`.
 
-👉 Change some text and save the file to see it update instantly.
+👉 Open this file, change some text and save it to see this page update instantly.
 
 # Connect to a Database
 👉 Connect to a database in the **Settings** menu. For this tutorial, choose a **SQLite** database and enter the filename `needful_things`. 
