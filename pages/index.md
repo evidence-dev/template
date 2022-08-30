@@ -1,5 +1,5 @@
 # Welcome to Evidence! 👋
-Evidence enables analysts to deliver a polished business intelligence system using SQL & markdown.
+Evidence enables you to deliver a polished business intelligence system using SQL & markdown.
 
 # Write Markdown
 Evidence pages are just markdown files. The file for this page is:
