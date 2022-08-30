@@ -2,7 +2,7 @@
 Evidence enables you to deliver a polished business intelligence system using SQL & markdown.
 
 # Write Markdown
-Evidence pages are just markdown files. The file for this page is:
+Evidence creates pages from markdown files. The file for this page is:
 
 `[my-project]/pages/index.md`.
 
