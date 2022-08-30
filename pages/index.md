@@ -1,5 +1,5 @@
 # Welcome to Evidence! 👋
-Evidence enables you to deliver a polished business intelligence system using SQL & markdown.
+Build a polished business intelligence system using only SQL & Markdown.
 
 # Write Markdown
 Evidence creates pages from markdown files. The file for this page is:
@@ -15,8 +15,6 @@ Evidence creates pages from markdown files. The file for this page is:
 
 # Run SQL
 Write queries using markdown code fences ` ``` `:
-
-![Writing SQL](sql.svg)
 
 ```orders_by_month
 select
@@ -48,8 +46,6 @@ Sometimes you need something *bigger*:
 # Add Charts & Components
 Charts can be included in a single line of code:
 
-![Adding a Bar Chart](BarChart.svg)
-
 <BarChart data = {orders_by_month} y=sales_usd0k title = 'Sales by Month, USD' />
 
 👉 Change the chart to a `LineChart`.
@@ -64,7 +60,7 @@ To get your project online, see the deployment instructions in the [settings men
 
 If you would prefer not to self-host your project, you might be interested in our upcoming cloud service, [Evidence Cloud](https://du3tapwtcbi.typeform.com/to/kwp7ZD3q). 
 
-# Get support 💬
+# Get Support 💬
 - Message us on <a href='https://join.slack.com/t/evidencedev/shared_invite/zt-uda6wp6a-hP6Qyz0LUOddwpXW5qG03Q' target="_blank">Slack</a>
 - See all the charts and components in the <a href="https://docs.evidence.dev/features/charts/examples" target="_blank">component library</a>.
 - Read the <a href='https://docs.evidence.dev/' target="_blank">Docs</a>
