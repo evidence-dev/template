@@ -18,13 +18,13 @@ Write queries using markdown code fences ` ``` `:
 
 ```orders_by_month
 select
-  substr(order_datetime,1,7) as date,
+  order_month,
   count(*) as number_of_orders,
   sum(sales) as sales_usd0k,
   sum(sales)/count(*) as average_order_value_usd2
 from orders
 
-group by date order by 1 desc
+group by order_month order by 1 desc
 ```
 
 You can see both the SQL and the query results by interacting with the query above.
