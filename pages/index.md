@@ -61,7 +61,7 @@ To get your project online, see the deployment instructions in the [settings men
 If you would prefer not to self-host your project, you might be interested in our upcoming cloud service, [Evidence Cloud](https://du3tapwtcbi.typeform.com/to/kwp7ZD3q). 
 
 # Get Support 💬
-- Message us on <a href='https://join.slack.com/t/evidencedev/shared_invite/zt-uda6wp6a-hP6Qyz0LUOddwpXW5qG03Q' target="_blank">Slack</a>
-- See all the charts and components in the <a href="https://docs.evidence.dev/features/charts/examples" target="_blank">component library</a>.
-- Read the <a href='https://docs.evidence.dev/' target="_blank">Docs</a>
-- Open an issue on <a href='https://github.com/evidence-dev/evidence' target="_blank">Github</a>
+- Message us on [Slack](https://join.slack.com/t/evidencedev/shared_invite/zt-uda6wp6a-hP6Qyz0LUOddwpXW5qG03Q)
+- See all the charts and components in the [component library](https://docs.evidence.dev/features/charts/examples)
+- Read the [Docs](https://docs.evidence.dev/)
+- Open an issue on [Github](https://github.com/evidence-dev/evidence)
