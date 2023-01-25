@@ -8,6 +8,12 @@ Evidence creates pages from markdown files. The file for this page is:
 
 👉 Open this file, change some text and save it to see this page update instantly.
 
+# Connect your Database
+👉 Connect to a database in the **Settings** menu. For this tutorial, choose a **DuckDB** database and enter the filename `needful_things.duckdb`.
+
+Evidence supports Snowflake, BigQuery, Redshift, Postgres, SQLite, DuckDB & [more](https://docs.evidence.dev/getting-started/connect-database)!
+
+![Connecting a database](connect-db.gif)
 
 ## Run SQL
 Write queries using markdown code fences ` ``` `:
@@ -50,13 +56,6 @@ Charts can be included in a single line of code:
 Evidence supports using conditionals & loops to determine what text and data is displayed.
 
 <BigLink href="/control-logic">Using Control Logic &rarr;</BigLink>
-
-# Connect your Database
-Evidence supports Snowflake, BigQuery, Redshift, Postgres, SQLite, DuckDB & [more](https://docs.evidence.dev/getting-started/connect-database)!
-
-👉 Connect your databases in the **Settings** menu. This tutorial is pre-connected to a **SQLite** database. 
-
-![Connecting a database](connect-db.gif)
 
 # Share your Project 
 To get your project online, see the deployment instructions in the [settings menu](/settings). More info is available in our [docs](https://docs.evidence.dev/deployment/deployment-overview).
