@@ -1,19 +1,15 @@
 # Welcome to Evidence! 👋
 Build a polished business intelligence system using only SQL & Markdown.
 
-# Write Markdown
+## Write Markdown
 Evidence creates pages from markdown files. The file for this page is:
 
 `[my-project]/pages/index.md`.
 
 👉 Open this file, change some text and save it to see this page update instantly.
 
-# Connect to a Database
-👉 Connect to a database in the **Settings** menu. For this tutorial, choose a **SQLite** database and enter the filename `needful_things`. 
 
-![Connecting a database](connect-db.gif)
-
-# Run SQL
+## Run SQL
 Write queries using markdown code fences ` ``` `:
 
 ```orders_by_month
@@ -33,7 +29,7 @@ You can see both the SQL and the query results by interacting with the query abo
 
 `where order_datetime >= '2021-01-01'`
 
-# Include Values in Text
+## Include Values in Text
 Return values from queries in text: 
 
 Last month customers placed <Value data={orders_by_month} column=number_of_orders/> orders.
@@ -43,17 +39,24 @@ Sometimes you need something *bigger*:
 
 👉 Add another `<BigValue/>` above showing `average_order_value_usd2`.
 
-# Add Charts & Components
+## Add Charts & Components
 Charts can be included in a single line of code:
 
 <BarChart data = {orders_by_month} y=sales_usd0k title = 'Sales by Month, USD' />
 
 👉 Change the chart to a `LineChart`.
 
-# Use More Powerful Features ⚡
-Evidence supports using logic & loops to determine what text and data is displayed.
+# Use Control Logic 🎛️
+Evidence supports using conditionals & loops to determine what text and data is displayed.
 
-<BigLink href="/powerful-features">Using Logic & Loops &rarr;</BigLink>
+<BigLink href="/control-logic">Using Control Logic &rarr;</BigLink>
+
+# Connect your Database
+Evidence supports Snowflake, BigQuery, Redshift, Postgres, SQLite, DuckDB & [more](https://docs.evidence.dev/getting-started/connect-database)!
+
+👉 Connect your databases in the **Settings** menu. This tutorial is pre-connected to a **SQLite** database. 
+
+![Connecting a database](connect-db.gif)
 
 # Share your Project 
 To get your project online, see the deployment instructions in the [settings menu](/settings). More info is available in our [docs](https://docs.evidence.dev/deployment/deployment-overview).

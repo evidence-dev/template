@@ -1,5 +1,5 @@
-# More Powerful Features ⚡
-This page covers some of Evidence's more powerful features: Loops and Logic.
+# 🎛️ Control Logic
+This page covers using your data to choose what Evidence displays with Loops and Conditionals.
 
 # Loops
 
@@ -26,7 +26,7 @@ You can use `{#each}` statements to loop through **each row** of a query, and ge
 
 `<Value data={category_row} column=sales_usd0k/>`
 
-# Logic
+# Conditionals
 
 ```orders_per_day
 select
