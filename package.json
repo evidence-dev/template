@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "build": "evidence build",
+    "build:strict": "evidence build:strict",
     "dev": "evidence dev -o",
     "test": "evidence build"
   },
