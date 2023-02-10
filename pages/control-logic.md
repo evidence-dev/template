@@ -30,7 +30,7 @@ You can use `{#each}` statements to loop through **each row** of a query, and ge
 
 ```orders_per_day
 select
-substr(order_datetime,1,10) as date,
+date_trunc('day', order_datetime) as date,
 sum(sales) as sales_usd
 from orders
 group by 1
@@ -53,8 +53,10 @@ Hooray! 🥳🥳🥳
 {:else}
 
 Missed sales target 
-on <Value data={orders_per_day} column=date row=0 /> 😞: 
+on <Value data={orders_per_day} column=date row=0 />: 
 <Value data={orders_per_day} column=sales_usd row=0 /> / $3,000
+
+😞
 
 {/if}
 
