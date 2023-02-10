@@ -8,7 +8,7 @@ Evidence creates pages from markdown files. The file for this page is:
 
 👉 Open this file, change some text and save it to see this page update instantly.
 
-# Connect your Database
+## Connect your Database
 👉 Connect to a database in the **Settings** menu. For this tutorial, choose a **DuckDB** database and enter the filename `needful_things.duckdb`.
 
 Evidence supports Snowflake, BigQuery, Redshift, Postgres, SQLite, DuckDB & [more](https://docs.evidence.dev/getting-started/connect-database)!
@@ -20,13 +20,13 @@ Write queries using markdown code fences ` ``` `:
 
 ```orders_by_month
 select
-  order_month,
+  date_trunc('month', order_datetime) as order_month,
   count(*) as number_of_orders,
   sum(sales) as sales_usd0k,
   sum(sales)/count(*) as average_order_value_usd2
 from orders
 
-group by order_month order by 1 desc
+group by 1 order by 1 desc
 ```
 
 You can see both the SQL and the query results by interacting with the query above.
@@ -38,12 +38,13 @@ You can see both the SQL and the query results by interacting with the query abo
 ## Include Values in Text
 Return values from queries in text: 
 
-Last month customers placed <Value data={orders_by_month} column=number_of_orders/> orders.
+Last month customers placed **<Value data={orders_by_month} column=number_of_orders/>** orders.
 
 Sometimes you need something *bigger*: 
 <BigValue data={orders_by_month} value=sales_usd0k />
+<BigValue data={orders_by_month} value=number_of_orders />
 
-👉 Add another `<BigValue/>` above showing `average_order_value_usd2`.
+👉 Add another `<BigValue/>` showing `average_order_value_usd2`.
 
 ## Add Charts & Components
 Charts can be included in a single line of code:
