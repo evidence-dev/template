@@ -13,6 +13,8 @@
   },
   "type": "module",
   "dependencies": {
-    "@evidence-dev/evidence": "next"
+    "@evidence-dev/evidence": "next",
+    "@evidence-dev/preprocess": "next",
+    "@evidence-dev/components": "next"
   }
 }
