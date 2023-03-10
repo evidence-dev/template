@@ -13,6 +13,6 @@
   },
   "type": "module",
   "dependencies": {
-    "@evidence-dev/evidence": "^12.0.1"
+    "@evidence-dev/evidence": "^14.0.0"
   }
 }
