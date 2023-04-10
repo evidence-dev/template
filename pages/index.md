@@ -1,6 +1,6 @@
 # Welcome to Evidence! 👋
 
-Build a data website using SQL and markdown.
+Create reports and analysis using SQL and markdown.
 
 ## Write Markdown
 
