@@ -112,12 +112,15 @@ Evidence supports using if statements & loops to determine what text and data is
 
 # Share your Project
 
+## Deploy Online
 To get your project online, see the deployment instructions in the [settings menu](/settings). More info is available in our [docs](https://docs.evidence.dev/deployment/overview).
 
 If you would prefer not to self-host your project, you might be interested in our upcoming cloud service, [Evidence Cloud](https://du3tapwtcbi.typeform.com/to/kwp7ZD3q).
 
+## Export PDF
 You can also generate a PDF of an Evidence page - use the top right menu to select Export PDF.
 
+## Download to CSV & Chart Images
 If you need to share individual pieces of information, Evidence data viz components come with buttons for CSV download and chart image download - hover over a component to see these options.
 
 # Get Support 
