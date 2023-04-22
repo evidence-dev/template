@@ -17,6 +17,19 @@ Once you've launched Evidence, this project includes a short tutorial to help yo
 
 Don't clone this repo, just download the code using the steps above.
 
+## Codespaces
+
+If you are using this template in Codespaces, use the following commands to get started:
+
+```shell
+npm install
+npm run dev -- --host 0.0.0.0
+```
+
+See [the CLI docs](https://docs.evidence.dev/cli/) for more command information.
+
+**Note:** Codespaces is much faster on the Desktop app. After the Codespace has booted, select the hamburger menu → Open in VS Code Desktop.
+
 ## Learning More
 
 - [Docs](https://docs.evidence.dev/)
