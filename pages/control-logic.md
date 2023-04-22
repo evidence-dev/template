@@ -26,7 +26,7 @@ You can use `{#each}` statements to loop through **each row** of a query, and ge
 
 `<Value data={category_row} column=sales_usd0k/>`
 
-# Conditionals
+# If Statements
 
 ```orders_per_day
 select
