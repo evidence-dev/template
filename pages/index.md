@@ -1,6 +1,16 @@
-# Welcome to Evidence! 👋
+# Welcome to Evidence!
 
-Create reports and analysis using SQL and markdown.
+<Alert status=success>
+This project includes everything you need to get started with Evidence, including a tutorial DuckDB database.
+</Alert>
+
+## Connect to the Tutorial Database
+
+👉 In the **Settings** menu, choose **DuckDB** and enter the filename `needful_things.duckdb`.
+
+Evidence supports Snowflake, BigQuery, Redshift, Postgres, SQLite, DuckDB, CSVs & [more](https://docs.evidence.dev/core-concepts/data-sources/#how-to-query-a-csv-file)!
+
+![Connecting a data source](connect-data-source.gif)
 
 ## Write Markdown
 
@@ -10,15 +20,12 @@ Evidence renders markdown files into web pages. The file for this page is:
 
 👉 Open this file, change some text and save it to see this page update instantly.
 
-## Connect to your Data Source
-
-👉 Connect to a data source in the **Settings** menu. For this tutorial, choose **DuckDB** and enter the filename `needful_things.duckdb`.
-
-Evidence supports Snowflake, BigQuery, Redshift, Postgres, SQLite, DuckDB & [more](https://docs.evidence.dev/getting-started/connect-database)!
-
-![Connecting a data source](connect-data-source.gif)
 
 ## Run SQL
+
+<Alert status=info>
+To see the SQL queries on a page, click the top right menu and select Show Queries
+</Alert>
 
 Write queries using markdown code fences ` ``` `:
 
@@ -38,6 +45,21 @@ You can see both the SQL and the query results by interacting with the query abo
 👉 Edit the above query to just display 2021 data by adding:
 
 `where order_datetime >= '2021-01-01'`
+
+## Query CSV Files
+<Alert status=info>
+If you are using the DuckDB connector or the CSV connector, you can query a CSV file using SQL. Just add a folder to the root of your project called `sources` and add your CSV files to that folder.
+</Alert>
+
+To query a CSV file, use the syntax below. This feature is powered by DuckDB, so all commands can be found in the [DuckDB docs](https://duckdb.org/docs/sql/query_syntax/select)
+
+`select * from 'sources/myfile.csv'`
+
+OR
+
+`select * from 'Users/myname/Downloads/myfile.csv'`
+
+This also works for Parquet files.
 
 ## Include Values in Text
 
@@ -61,19 +83,19 @@ Charts can be included in a single line of code:
 
 # Use Control Logic 🎛️
 
-Evidence supports using conditionals & loops to determine what text and data is displayed.
+Evidence supports using if statements & loops to determine what text and data is displayed.
 
 <BigLink href="/control-logic">Using Control Logic &rarr;</BigLink>
 
 # Share your Project
 
-To get your project online, see the deployment instructions in the [settings menu](/settings). More info is available in our [docs](https://docs.evidence.dev/deployment/deployment-overview).
+To get your project online, see the deployment instructions in the [settings menu](/settings). More info is available in our [docs](https://docs.evidence.dev/deployment/overview).
 
 If you would prefer not to self-host your project, you might be interested in our upcoming cloud service, [Evidence Cloud](https://du3tapwtcbi.typeform.com/to/kwp7ZD3q).
 
 # Get Support 
 
 - Message us on [Slack](https://join.slack.com/t/evidencedev/shared_invite/zt-uda6wp6a-hP6Qyz0LUOddwpXW5qG03Q)
-- See all the charts and components in the [component library](https://docs.evidence.dev/features/charts/examples)
+- See all the charts and components in the [component library](https://docs.evidence.dev/components/all-components)
 - Read the [Docs](https://docs.evidence.dev/)
 - Open an issue on [Github](https://github.com/evidence-dev/evidence)
