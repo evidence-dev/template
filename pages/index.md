@@ -1,14 +1,14 @@
 # Welcome to Evidence!
 
 <Alert status=success>
-This project includes everything you need to get started with Evidence, including a tutorial DuckDB database.
+This project includes everything you need to get started with Evidence, including a tutorial DuckDB database. Everything you see on this page is defined in code, including this Alert!
 </Alert>
 
 ## Connect to the Tutorial Database
 
-👉 In the **Settings** menu, choose **DuckDB** and enter the filename `needful_things.duckdb`.
+👉 In the [Settings menu](/settings), choose **DuckDB** and enter the filename `needful_things.duckdb`. This only takes a few seconds (see the GIF below).
 
-Evidence supports Snowflake, BigQuery, Redshift, Postgres, SQLite, DuckDB, CSVs & [more](https://docs.evidence.dev/core-concepts/data-sources/#how-to-query-a-csv-file)!
+Evidence also supports Snowflake, BigQuery, Redshift, Postgres, SQLite, CSVs & [more](https://docs.evidence.dev/core-concepts/data-sources/#how-to-query-a-csv-file)!
 
 ![Connecting a data source](connect-data-source.gif)
 
@@ -63,23 +63,46 @@ This also works for Parquet files.
 
 ## Include Values in Text
 
-Return values from queries in text:
+Return values from queries in text using the `Value` component:
 
 Last month customers placed **<Value data={orders_by_month} column=number_of_orders/>** orders.
 
-Sometimes you need something *bigger*: 
+## Add Data Viz Components
+
+### Big Values
 <BigValue data={orders_by_month} value=sales_usd0k />
 <BigValue data={orders_by_month} value=number_of_orders />
 
 👉 Add another `<BigValue/>` showing `average_order_value_usd2`.
 
-## Add Charts & Components
+### Charts
 
 Charts can be included in a single line of code:
 
-<BarChart data = {orders_by_month} y=sales_usd0k title = 'Sales by Month, USD' />
+<BarChart data={orders_by_month} y=sales_usd0k title = 'Sales by Month, USD' />
 
 👉 Change the chart to a `LineChart`.
+
+### Tables
+
+<DataTable data={orders_by_month}/>
+
+## Add UI Components
+
+### Alerts and Tabs
+
+<Tabs>
+    <Tab label="First Tab">
+      <Alert status=warning>
+      This is an Alert for the first tab
+      </Alert>
+    </Tab>
+    <Tab label="Second Tab">
+      <Alert status=danger>
+      This is an Alert for the second tab
+      </Alert>    
+    </Tab>
+</Tabs>
 
 # Use Control Logic 🎛️
 
