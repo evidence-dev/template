@@ -1,0 +1,20 @@
+{
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "npm install",
+  "remoteEnv": {
+    "DATABASE": "duckdb",
+    "FILENAME": "jaffle_shop.duckdb"
+  },
+  // Configure tool-specific properties
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.codespaces",
+        "evidence.evidence-vscode",
+        "svelte.svelte-vscode",
+      ]
+    }
+  }
+}
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
