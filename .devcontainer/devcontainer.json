@@ -3,7 +3,7 @@
   "postCreateCommand": "npm install",
   "remoteEnv": {
     "DATABASE": "duckdb",
-    "FILENAME": "jaffle_shop.duckdb"
+    "FILENAME": "needful_things.duckdb"
   },
   // Configure tool-specific properties
   "customizations": {
