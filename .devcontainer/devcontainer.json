@@ -11,7 +11,7 @@
     "customizations": {
       "vscode": {
         "extensions": [
-          "GitHub.codespaces",
+          // "GitHub.codespaces",
           // "evidence.evidence-vscode",
           // "svelte.svelte-vscode",
         ]
