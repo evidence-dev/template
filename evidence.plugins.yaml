@@ -1,9 +1,9 @@
 components:
   # This loads all of evidence's core charts and UI components
   # You probably don't want to edit this dependency unless you know what you are doing
-  "@evidence-dev/core-components": {}
+  @evidence-dev/core-components: {}
 
-  # Loading a plugin with all defaults:
+  # Loading a plugin:
   # your-component-plugin: {}
   #
   # Adding aliases:
@@ -23,3 +23,5 @@ components:
   #   provides:
   #     - SomeComponent
   #     - SomeOtherComponent
+  #
+  # For more info: https://docs.evidence.dev/plugins/using-plugins/
