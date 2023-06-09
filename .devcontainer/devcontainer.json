@@ -3,6 +3,7 @@
 
     // Use 'postCreateCommand' to run commands after the container is created.
     "onCreateCommand": "npm install",
+    "postCreateCommand": "npm run dev -- --host 0.0.0.0",
     "remoteEnv": {
       "DATABASE": "duckdb",
       "FILENAME": "needful_things.duckdb"
