@@ -1,0 +1,30 @@
+{
+    // This file is only used in Codespaces. If you are developing locally, you can remove the .devcontainer directory without consequences
+
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:0-18-bullseye",
+
+    // Use 'postCreateCommand' to run commands after the container is created.
+    "onCreateCommand": "npm install && rm .vscode/extensions.json && rmdir .vscode",
+    "remoteEnv": {
+      "DATABASE": "duckdb",
+      "FILENAME": "needful_things.duckdb"
+    },
+    // Configure tool-specific properties
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          // "GitHub.codespaces",
+          "evidence.evidence-vscode",
+          "svelte.svelte-vscode",
+        ]
+      },
+      "codespaces": {
+        "openFiles": [
+          "pages/index.md"
+        ]
+      }
+    },
+    // "forwardPorts": [3000]
+  }
+  // For format details, see https://aka.ms/devcontainer.json. For config options, see the
+  // README at: https://github.com/devcontainers/templates/tree/main/src/python
