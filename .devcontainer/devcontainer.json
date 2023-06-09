@@ -2,8 +2,7 @@
     // This file is only used in Codespaces. If you are developing locally, you can remove the .devcontainer directory without consequences
 
     // Use 'postCreateCommand' to run commands after the container is created.
-    "onCreateCommand": "npm install",
-    "postStartCommand": "npm run dev -- --host 0.0.0.0",
+    "onCreateCommand": "npm install && rm .vscode/extensions.json && rmdir .vscode",
     "remoteEnv": {
       "DATABASE": "duckdb",
       "FILENAME": "needful_things.duckdb"
@@ -23,7 +22,7 @@
         ]
       }
     },
-    "forwardPorts": [3000]
+    // "forwardPorts": [3000]
   }
   // For format details, see https://aka.ms/devcontainer.json. For config options, see the
   // README at: https://github.com/devcontainers/templates/tree/main/src/python
