@@ -8,7 +8,7 @@
       "memory": "16gb",
       "storage": "32gb"
     },
-    
+
     // Use 'postCreateCommand' to run commands after the container is created.
     "onCreateCommand": "npm install && rm .vscode/extensions.json && rmdir .vscode",
     "remoteEnv": {
@@ -21,7 +21,7 @@
         "extensions": [
           // "GitHub.codespaces",
           "evidence.evidence-vscode",
-          "svelte.svelte-vscode",
+          "svelte.svelte-vscode"
         ]
       },
       "codespaces": {
