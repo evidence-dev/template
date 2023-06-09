@@ -15,8 +15,15 @@
           "evidence.evidence-vscode",
           "svelte.svelte-vscode",
         ]
+      },
+      "codespaces": {
+        "openFiles": [
+          "README.md",
+          "pages/index.md"
+        ]
       }
-    }
+    },
+    "forwardPorts": [3000]
   }
   // For format details, see https://aka.ms/devcontainer.json. For config options, see the
   // README at: https://github.com/devcontainers/templates/tree/main/src/python
