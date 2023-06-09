@@ -2,7 +2,8 @@
     // This file is only used in Codespaces. If you are developing locally, you can remove the .devcontainer directory without consequences
 
     // Use 'postCreateCommand' to run commands after the container is created.
-    "onCreateCommand": "npm install && rm .vscode/extensions.json && rmdir .vscode",
+    "initializeCommand": "rm .vscode/extensions.json && rmdir .vscode",
+    "onCreateCommand": "npm install",
     "remoteEnv": {
       "DATABASE": "duckdb",
       "FILENAME": "needful_things.duckdb"
