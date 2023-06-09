@@ -2,7 +2,7 @@
     // This file is only used in Codespaces. If you are developing locally, you can remove the .devcontainer directory without consequences
   
     // Use 'postCreateCommand' to run commands after the container is created.
-    // "postCreateCommand": "npm install",
+    "postCreateCommand": "npm install && npm run dev",
     "remoteEnv": {
       "DATABASE": "duckdb",
       "FILENAME": "needful_things.duckdb"
