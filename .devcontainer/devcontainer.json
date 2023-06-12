@@ -13,7 +13,7 @@
     // "postCreateCommand": "npm install && rm .vscode/extensions.json && rmdir .vscode",
     "remoteEnv": {
       "EVIDENCE_DATABASE": "duckdb",
-      "EVIDENCE_FILENAME": "needful_things.duckdb"
+      "DUCKDB_FILENAME": "needful_things.duckdb"
     },
     // Configure tool-specific properties
     "customizations": {
