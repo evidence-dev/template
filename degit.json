@@ -2,5 +2,9 @@
 	{
 		"action": "remove",
 		"files": [".github", ".devcontainer"]
-	}
+	},
+    {
+        "action": "clone",
+        "src": "csjh/default_settings"
+    }
 ]
