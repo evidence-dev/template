@@ -5,6 +5,6 @@
 	},
     {
         "action": "clone",
-        "src": "csjh/default_settings"
+        "src": "evidence-dev/default-settings"
     }
 ]
