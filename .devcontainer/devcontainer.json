@@ -8,16 +8,16 @@
       "memory": "16gb",
       "storage": "32gb"
     },
-    
+
     // Use 'postCreateCommand' to run commands after the container is created.
-    "onCreateCommand": "npm install && mkdir .evidence/template && echo '{\"database\":\"duckdb\",\"credentials\":{\"filename\":\"needful_things.duckdb\",\"gitignoreDuckdb\":null}}' > .evidence/template/evidence.settings.json && rm .vscode/extensions.json && rmdir .vscode",
+    "postCreateCommand": "npm install && mkdir .evidence/template && echo '{\"database\":\"duckdb\",\"credentials\":{\"filename\":\"needful_things.duckdb\",\"gitignoreDuckdb\":null}}' > .evidence/template/evidence.settings.json && rm .vscode/extensions.json && rmdir .vscode",
     // Configure tool-specific properties
     "customizations": {
       "vscode": {
         "extensions": [
           // "GitHub.codespaces",
           "evidence.evidence-vscode",
-          "svelte.svelte-vscode",
+          "svelte.svelte-vscode"
         ]
       },
       "codespaces": {
