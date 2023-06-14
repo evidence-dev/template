@@ -2,14 +2,6 @@
 
 Build polished data products with SQL and Markdown.
 
-## Connect the Tutorial Database
-
-👉 In the [settings menu](/settings), choose **DuckDB** and enter the filename `needful_things.duckdb`. 
-
-Evidence also supports Snowflake, BigQuery, Redshift, Postgres, SQLite, CSVs & [more](https://docs.evidence.dev/core-concepts/data-sources/#how-to-query-a-csv-file)!
-
-![Connecting a data source](connect-data-source.gif)
-
 ## Write Markdown
 
 Evidence renders markdown files into web pages. The file for this page is:
