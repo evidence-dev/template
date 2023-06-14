@@ -10,11 +10,7 @@
     },
 
     // Use 'postCreateCommand' to run commands after the container is created.
-    // "postCreateCommand": "npm install && rm .vscode/extensions.json && rmdir .vscode",
-    "remoteEnv": {
-      "EVIDENCE_DATABASE": "duckdb",
-      "EVIDENCE_DUCKDB_FILENAME": "needful_things.duckdb"
-    },
+    "onCreateCommand": "mkdir .evidence/template && echo '{\"database\":\"duckdb\",\"credentials\":{\"filename\":\"needful_things.duckdb\",\"gitignoreDuckdb\":null}}' > .evidence/template/evidence.settings.json && rm .vscode/extensions.json && rmdir .vscode",
     // Configure tool-specific properties
     "customizations": {
       "vscode": {
