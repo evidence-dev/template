@@ -4,8 +4,8 @@
     "image": "mcr.microsoft.com/devcontainers/javascript-node:0-18-bullseye",
 
     "hostRequirements": {
-      "cpus": 8,
-      "memory": "16gb",
+      "cpus": 4,
+      "memory": "4gb",
       "storage": "32gb"
     },
 
