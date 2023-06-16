@@ -19,12 +19,12 @@
           "evidence.evidence-vscode",
           "svelte.svelte-vscode"
         ]
+      },
+      "codespaces": {
+        "openFiles": [
+           "pages/index.md"
+        ]
       }
-//       "codespaces": {
-//         "openFiles": [
-//           "pages/index.md"
-//         ]
-//       }
     }
     // "forwardPorts": [3000]
   }
