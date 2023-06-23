@@ -9,8 +9,6 @@
       "storage": "32gb"
     },
 
-    // Use 'postCreateCommand' to run commands after the container is created.
-    "postCreateCommand": "mkdir .evidence/template && echo '{\"database\":\"duckdb\",\"credentials\":{\"filename\":\"needful_things.duckdb\",\"gitignoreDuckdb\":null}}' > .evidence/template/evidence.settings.json && rm .vscode/extensions.json && rmdir .vscode",
     // Configure tool-specific properties
     "customizations": {
       "vscode": {
@@ -24,7 +22,9 @@
         "openFiles": [
            "pages/index.md"
         ]
-      }
+      },
+    // Use 'postCreateCommand' to run commands after the container is created.
+    "postCreateCommand": "mkdir .evidence/template && echo '{\"database\":\"duckdb\",\"credentials\":{\"filename\":\"needful_things.duckdb\",\"gitignoreDuckdb\":null}}' > .evidence/template/evidence.settings.json && rm .vscode/extensions.json && rmdir .vscode && code -r --wait 'command:evidence.openWalkthrough'"
     }
     // "forwardPorts": [3000]
   }
