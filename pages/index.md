@@ -2,6 +2,8 @@
 
 Build polished data products with SQL and Markdown.
 
+[Share feedback with the Evidence team](https://du3tapwtcbi.typeform.com/to/GZNZe1GY)
+
 ## Write Markdown
 
 Evidence renders markdown files into web pages. The file for this page is:
