@@ -2,6 +2,8 @@
 
 Welcome to Evidence. Use this project template to get started.
 
+[Share your feedback with the Evidence team](https://du3tapwtcbi.typeform.com/to/GZNZe1GY)
+
 ## Getting Started
 
 Check out the docs for [alternative install methods](https://docs.evidence.dev/getting-started/install-evidence) including Docker, Github Codespaces, and alongside dbt.
