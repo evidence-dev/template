@@ -13,8 +13,9 @@
   },
   "type": "module",
   "dependencies": {
-    "@evidence-dev/core-components": "1.1.0",
-    "@evidence-dev/evidence": "19.0.0"
+    "@evidence-dev/core-components": "usql",
+    "@evidence-dev/evidence": "usql",
+    "@evidence-dev/faker-datasource": "usql"
   },
   "overrides": {
     "jsonwebtoken": "9.0.0",
