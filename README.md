@@ -1,5 +1,7 @@
 # Evidence Template Project
 
+Looking for the [prerelease information?](./Universal%20SQL.md)
+
 Welcome to Evidence. Use this project template to get started.
 
 [Share your feedback with the Evidence team](https://du3tapwtcbi.typeform.com/to/GZNZe1GY)
