@@ -98,7 +98,7 @@ This has a few implications on how projects are built:
       2. `type`, database name (e.g. `postgres` or `bigquery`)
       3. `options`, see the reference for your database for the options needed
 4. If using a SQL Connector, create some `.sql` files  
-   1. You can think of these files as views; they can be simple `select * from x;` or more complex
+   1. Each of these files will create a table in the client database, which will be named after the file (e.g. `test.sql` becomes the `test` table)
 5. Repeat steps 2-4 for all the databases you would like
 6. Run `npm run build:sources`
 

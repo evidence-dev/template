@@ -3,7 +3,7 @@
 	let q_input = sql_query + "";
 </script>
 
-# Evidence Universal SQL Demo
+# Evidence Universal SQL
 
 ```q
 ${q_input}
