@@ -1,6 +1,8 @@
-# Evidence Template Project
+Looking for the [prerelease documentation?](./Universal%20SQL.md)
 
-> Looking for the [prerelease documentation?](./Universal%20SQL.md)
+---
+
+# Evidence Template Project
 
 Welcome to Evidence. Use this project template to get started.
 
