@@ -1,30 +1,79 @@
-<script>
-    let sql_query = "SELECT * FROM users";
-	let q_input = sql_query + "";
-</script>
+# Welcome to Evidence!
 
-# Evidence Universal SQL
+<Alert status=warning>
 
-```q
-${q_input}
+This is a pre-release preview of Universal SQL. 
+
+</Alert>
+
+If you have ideas, shoot us a message on [Slack](https://join.slack.com/t/evidencedev/shared_invite/zt-uda6wp6a-hP6Qyz0LUOddwpXW5qG03Q)
+
+## Write Markdown
+
+Evidence renders markdown files into web pages. The file for this page is:
+
+`[my-project]/pages/index.md`.
+
+👉 Open this file, change some text and save it to see this page update instantly.
+
+## Universal SQL
+
+Write universal queries using markdown code fences ` ``` `:
+
+Here we're querying the `orders` table defined in `sources/demo-data`. This table has about a million records in it. 
+
+You have access to all of the tables defined in your sources directory. 
+
+```all_orders
+
+select 
+	count(*) as n_orders
+from orders 
+
 ```
 
+```orders_by_month
+select
+  date_trunc('month', order_date) as order_month,
+  count(*) as number_of_orders,
+  sum(price*quantity) as sales_usd0k,
+  sum(price*quantity)/count(*) as average_order_value_usd2
+from orders
 
-<div class="container mx-auto relative font-mono bg-black rounded-xl">
-    <h3 class="mx-4 py-4 m-0 text-white select-none font-mono">Query Console</h3>
-	<hr class="m-0 w-full border-white/30"/>
-	<textarea
-		class="mt-4 px-4 pb-1 min-h-[100px] outline-none focus:outline-0 resize-none w-full bg-black text-white text-sm"
-		bind:value={sql_query}
-	/>
-	<div class="block ml-auto pr-4 py-4">
-    <button class="block ml-auto bg-green-600 hover:bg-green-700 active:bg-green-800 transition-colors px-4 py-2 text-sm text-white rounded-xl select-none" on:click={() => q_input = sql_query}
-	>
-        Run Query
-    </button>
-	</div>
-</div>
+group by 1 order by 1 desc
+```
 
-## Results: 
+You can see both the SQL and the query results by interacting with the query above.
 
-<DataTable data={q} />
+## Accept inputs into queries 
+
+<Alert status=info>
+	This is new! 
+</Alert>
+
+Here we're syncing the value from an input into a query. 
+
+Notice that the query is re-executed as you move the slider, and that the results are instant with a 1M record table. 
+
+<RangeInput min=0 max=44 bind:inputPrice={inputPrice} />
+
+```orders_by_month_filtered
+select
+  date_trunc('month', order_date) as order_month,
+  count(*) as number_of_orders,
+  sum(price*quantity) as sales_usd0k,
+  sum(price*quantity)/count(*) as average_order_value_usd2
+from orders
+where price > ${inputPrice}
+
+group by 1 order by 1 desc
+```
+
+<BarChart data={orders_by_month_filtered} y=number_of_orders title = {`Orders with prices greater than $${inputPrice} `} />
+
+Last month customers placed **<Value data={orders_by_month} column=number_of_orders/>** orders, of which <Value data={orders_by_month_filtered} column=number_of_orders/> had prices greater than ${inputPrice}.
+
+
+<script>
+	let inputPrice = 0
+</script>
