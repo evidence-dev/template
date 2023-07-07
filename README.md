@@ -4,7 +4,7 @@
 
 
 Thanks for trying out the prerelease version of our planned Universal SQL feature. 
-If you have any feedback, please reach out to us on slack! 
+If you have any feedback, please reach out to us on [Slack](https://join.slack.com/t/evidencedev/shared_invite/zt-uda6wp6a-hP6Qyz0LUOddwpXW5qG03Q)! 
 
 There are 2 major changes included in this prerelease:
 
