@@ -1,27 +1,49 @@
 # Universal SQL Prerelease
 
-Thank you for trying out the prerelease version of our upcoming Universal SQL feature,
-any feedback you can provide will help ensure that this feature is the best it can be.
+Thanks for trying out the prerelease version of our planned Universal SQL feature. 
+If you have any feedback, please reach out to us on slack! 
 
 There are 2 major changes included in this prerelease:
 
-- You can now connect to more than one data source (Databases or APIs) in one project
-- The concept of "Source Queries" has been introduced, which enable much higher levels of interactivity on the page.
+## 1. Multiple Data Sources in one project
+
+- Projects can now connect to multiple data sources simultaneously. For example, a Snowflake connection and a Postgres connection. 
+- Data sources are no longer restricted to SQL databases. We're adding support for direct connections to APIs and other tools. 
+
+## 2. Universal SQL 
+
+- Evidence projects now include a SQL runtime powered by [duckdb](https://duckdb.org/).
+- Queries written in markdown files use this runtime. 
+- These queries can run across all of your data sources, meaning you can join data from two separate data sources. 
+- These SQL queries can accept inputs, allowing you to build interactive reports, and pass variables into them from templated pages.
+- These queries are very performant, and allow you to work with much larger data sets  
 
 ## What is included in this Prerelease?
 
 tl;dr:
 
 - You can use multiple databases in one project
-- You can join queries against these databases
-- You can build more interactive reports (e.g. filters, drill-downs, etc)
-  - There is a lot more work to be done on this front, it requires some svelte & javascript knowledge to implement, but before release there will be helper components
+- You can write queries across all of those data sources 
+- You can inject variables into your queries to create interactives (e.g. filters)
+- You can pass large data sets into your reports 
+
+## Limitations 
+
+- There are lots of rough edges in this pre-release. In particular, you will often see an error state while the component is loading. 
+
+## Getting started
+
+1. Clone this repo and checkout the `next` branch 
+1. Run `npm run build:sources`
+1. Run `npm run dev` 
+
+Make sure you run `npm run build:sources` before `npm run dev`. 
 
 ### Multiple Datasources
 
 The `sources` folder in Evidence projects is undergoing major changes; instead of containing standalone sql files and
 csv files,
-it is now made up of directories that define different data sources.
+it is now made up of directories that each define different data sources (e.g. a Postgres connection, or a Snowflake connection).
 
 A `sources` folder may look something like this:
 
@@ -37,7 +59,7 @@ sources/
        bounce_rates.sql
 ```
 
-This defines 2 data sources, made up of a directory (e.g. `sales`), and a `connection.yaml` file.
+This defines 2 data sources, each made up of a directory (e.g. `sales` or `application_analytics`) , and a `connection.yaml` file. 
 
 The `connection.yaml` file contains details about what a data source is; including the type, and any connection
 information.
@@ -45,15 +67,12 @@ information.
 A `postgres` connection would look something like this:
 
 ```yaml
-# This isn't used right now, but will eventually be the name of the schema these tables will rely in
 name: local_postgres
-# Which type of database?
 type: postgres
 
-# Options will vary by datasource connector
 options:
-  user: postgres
-  password: postgres
+  user: ${environment_Variable}
+  password: ${environment_Variable}
   host: localhost
   port: 5432
   database: postgres
@@ -61,18 +80,18 @@ options:
     rejectUnauthorized: false
 ```
 
-### Source Queries
+### Sources 
 
-The sql files (and other definitions) in the sources are now available
+The queries (SQL files and other) in the sources are executed and made available
 as tables in your Evidence pages. Each of your source queries is executed
 _at build time_, and the results are placed in a [parquet](https://parquet.apache.org/) file. These files are then loaded and queried against in a viewer's browser using [duckdb](https://duckdb.org/).
 
 This has a few implications on how projects are built:
 
 - You can now query against _all_ your data sources, regardless of what they are
-  - e.g. you can join postgres and snowflake in your project
-- You can have fewer queries against your warehouses, any complex queries can be run against duckdb (for free!)
-- You can interpolate variables into your SQL
+  - e.g. you can join postgres data and snowflake data in your project
+- You can have fewer queries against your warehouses (for free!)
+- You can interpolate variables into your SQL 
   - Interactive filters are now much easier to implement, and much more performant
   - Templated page variables can be used in queries, without needing to use Javascript
 
@@ -80,15 +99,24 @@ This has a few implications on how projects are built:
 
 ### Using the Example Database
 
-1. Run `npm run build:sources`
-2. Run `npm run dev`
-3. Open [the new schema explorer](http://localhost:3000/explore/schema)
-   1. This outlines the schema that your project queries will run against
-4. Try writing some queries
-   1. The [home page](http://localhost:3000) has a rudimentary query console
-   2. You can also edit the pages to add new queries.
+The template includes a large example data set generated with [FakerJS](https://fakerjs.dev). This is a new source type. Each of the tables returned by faker are defined in `.yaml` files (e.g. `social_media/comments.yaml`). 
 
-### Setting up custom connectors
+Once you have built your sources `npm run build:sources`, and launched the dev server `npm run dev`. 
+
+You can see the home page, and some example universal SQL queries against the data. 
+
+We have also included a [new schema explorer](http://localhost:3000/explore/schema) at `explore/schema` which lists all of the tables returned by your sources. 
+
+### Passing inputs into queries 
+
+The home page includes an example of passing user input directly into a SQL query, using the `${input}` syntax.
+
+As you adjust the input, the query re-executes. 
+
+
+### Adding additional connectors 
+
+If you want to use your own data, you can add connectors to the project. See instructions below. 
 
 1. Using the information in [References](#references) install the connectors you want to use
 2. Create a new directory in `./sources`
@@ -101,10 +129,6 @@ This has a few implications on how projects are built:
    1. Each of these files will create a table in the client database, which will be named after the file (e.g. `test.sql` becomes the `test` table)
 5. Repeat steps 2-4 for all the databases you would like
 6. Run `npm run build:sources`
-
-## References
-
-### Datasources
 
 #### BigQuery
 
