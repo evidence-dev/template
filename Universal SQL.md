@@ -99,7 +99,7 @@ This has a few implications on how projects are built:
 
 ### Using the Example Database
 
-The template includes a large example data set generated with [FakerJS](https://fakerjs.dev). This is a new source type. Each of the tables returned by faker are defined in `.yaml` files (e.g. `social_media/comments.yaml`). 
+The template includes a large example data set generated with a new [FakerJS](https://fakerjs.dev) connector. Each of the tables returned by faker are defined in `.yaml` files (e.g. `social_media/comments.yaml`). 
 
 Once you have built your sources `npm run build:sources`, and launched the dev server `npm run dev`. 
 
