@@ -8,12 +8,12 @@ If you have any feedback, please reach out to us on [Slack](https://join.slack.c
 
 There are 2 major changes included in this prerelease:
 
-## 1. Multiple Data Sources in one project
+**1. Multiple Data Sources in one project**
 
 - Projects can now connect to multiple data sources simultaneously. For example, a Snowflake connection and a Postgres connection. 
 - Data sources are no longer restricted to SQL databases. We're adding support for direct connections to APIs and other tools. 
 
-## 2. Universal SQL 
+**2. Universal SQL** 
 
 - Evidence projects now include a SQL runtime powered by [duckdb](https://duckdb.org/).
 - Queries written in markdown files use this runtime. 
@@ -97,8 +97,6 @@ This has a few implications on how projects are built:
 - You can interpolate variables into your SQL 
   - Interactive filters are now much easier to implement, and much more performant
   - Templated page variables can be used in queries, without needing to use Javascript
-
-## Getting Started
 
 ### Using the Example Database
 
