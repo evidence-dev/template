@@ -16,7 +16,8 @@
   "dependencies": {
     "@evidence-dev/core-components": "usql",
     "@evidence-dev/evidence": "usql",
-    "@evidence-dev/faker-datasource": "usql"
+    "@evidence-dev/faker-datasource": "usql",
+    "@evidence-dev/usql-datatable": "^1.0.2"
   },
   "overrides": {
     "jsonwebtoken": "9.0.0",
