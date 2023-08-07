@@ -43,6 +43,13 @@ tl;dr:
 
 Make sure you run `npm run build:sources` before `npm run dev`. 
 
+### Updating:
+
+The prerelease releases frequently, to ensure you have the most up-to-date changes; run `npm upgrade`.
+
+Note that breaking changes may be introduced, backing up your `package-lock.json` (or making sure you have it in version control before running the command) will ensure that you can revert to the previous versions if needed.
+
+
 ### Multiple Datasources
 
 The `sources` folder in Evidence projects is undergoing major changes; instead of containing standalone sql files and
