@@ -10,7 +10,8 @@ There are 2 major changes included in this prerelease:
 
 **1. Multiple Data Sources in one project**
 
-- Projects can now connect to multiple data sources simultaneously. For example, a Snowflake connection and a Postgres connection. 
+- Projects can now connect to multiple data sources simultaneously. For example, a Snowflake connection and a Postgres connection.
+  - This includes support for multiple connections to the same type of database (e.g. 2 Postgres databases).
 - Data sources are no longer restricted to SQL databases. We're adding support for direct connections to APIs and other tools. 
 
 **2. Universal SQL** 
@@ -45,8 +46,7 @@ Make sure you run `npm run build:sources` before `npm run dev`.
 ### Multiple Datasources
 
 The `sources` folder in Evidence projects is undergoing major changes; instead of containing standalone sql files and
-csv files,
-it is now made up of directories that each define different data sources (e.g. a Postgres connection, or a Snowflake connection).
+csv files, it is now made up of directories that each define different data sources (e.g. a Postgres connection, or a Snowflake connection).
 
 A `sources` folder may look something like this:
 
@@ -64,8 +64,12 @@ sources/
 
 This defines 2 data sources, each made up of a directory (e.g. `sales` or `application_analytics`) , and a `connection.yaml` file. 
 
+#### Configuring Data sources
+
+##### `connection.yaml` (Version Controlled)
+
 The `connection.yaml` file contains details about what a data source is; including the type, and any connection
-information.
+information. You should not store secret values like passwords in this file, as it is included in source control. Instead, see [`connection.options.yaml`](#connectionoptionsyaml) or [`.env`](#envenvironment-variables)
 
 A `postgres` connection would look something like this:
 
@@ -74,14 +78,36 @@ name: local_postgres
 type: postgres
 
 options:
-  user: ${environment_Variable}
-  password: ${environment_Variable}
+  user: username
+  password: password # Note: passwords and other secret values should be configured via enviornment variables
   host: localhost
   port: 5432
   database: postgres
   ssl:
     rejectUnauthorized: false
 ```
+
+##### `.env`/Environment Variables
+
+Evidence can be configured by using a `.env` file in the root of your project. 
+This is the recommended way to configure secret values like passwords, and can also 
+be used to alias existing environment variables that you use to connect to data sources.
+
+The names of environment variables used for configuration are predetermined based on the name
+of your data source:
+
+`EVIDENCE_SOURCE_[source name]_[source option]=[value]`
+
+To configure the password for the above connection; the environment variable would be:
+
+`EVIDENCE_SOURCE_local_postgres_password=postgres`
+
+If you want to use an existing environment variable (e.g. `PG_PASSWORD`), you can prefix 
+that variable with `$` and use it as the value.
+
+`EVIDENCE_SOURCE_local_postgres_password=$PG_PASSWORD`
+
+Note that the `source name` is not case sensitive, but the `source option` _is_ case sensitive.
 
 ### Sources 
 
@@ -126,6 +152,7 @@ If you want to use your own data, you can add connectors to the project. See ins
       1. `name`, arbitrary, currently unused
       2. `type`, database name (e.g. `postgres` or `bigquery`)
       3. `options`, see the reference for your database for the options needed
+         1. Note that you should use [environment variables](#envenvironment-variables) for configuration that is secret (e.g. passwords), otherwise you risk checking your secrets into version control.
 4. If using a SQL Connector, create some `.sql` files  
    1. Each of these files will create a table in the client database, which will be named after the file (e.g. `test.sql` becomes the `test` table)
 5. Repeat steps 2-4 for all the databases you would like
