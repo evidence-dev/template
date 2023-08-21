@@ -1,7 +1,7 @@
 [
 	{
 		"action": "remove",
-		"files": [".github", ".devcontainer"]
+		"files": [".devcontainer"]
 	},
     {
         "action": "clone",
