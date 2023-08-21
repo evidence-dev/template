@@ -1,5 +1,9 @@
 # {$page.params.category}
 
+The code for this page is in `pages/[category].md`. 
+
+You can pass in different parameters to the page, and get different versions of the same template.
+
 
 ```sql category_sales
 select 
@@ -18,7 +22,7 @@ group by 1,2
     y=sales 
     x=month
     yFmt=usd
-    title="Sales by Month" 
+    title="Sales of {$page.params.category} by Month"
 />
 
 ## Top Products
@@ -33,10 +37,10 @@ group by 1,2
 order by 3 desc
 ```
 
-The top products in this category are:
+The most popular {$page.params.category} are:
 
 {#each top_products.filter(row => row.category == $page.params.category) as product}
 
-- **{product.item}** with {fmt(product.sales,"usd")} in sales
+- The **{product.item}** with {fmt(product.sales,"usd")} in sales
 
 {/each}
