@@ -1,4 +1,6 @@
-# Welcome to Evidence
+---
+title: Welcome to Evidence
+---
 
 _Build polished data products with SQL and Markdown_
 
@@ -36,7 +38,7 @@ You can see both the SQL and the query results by interacting with the query abo
 
 ## Show Data with Components
 
-### Values in Text
+### Value in Text
 
 Last month customers placed **<Value data={orders_by_month} column=number_of_orders/>** orders. The AOV was **<Value data={orders_by_month} column=average_order_value fmt=usd2/>**.
 
@@ -49,44 +51,27 @@ Last month customers placed **<Value data={orders_by_month} column=number_of_ord
 ### Bar Chart
 
 
-<BarChart data={orders_by_month} y=number_of_orders title = 'Orders by Month' />
+<BarChart data={orders_by_month} y=number_of_orders />
 
 > **Try:** Change the chart to a `<LineChart>`.
 
 ### Data Table
 
-<DataTable data={orders_by_month} rows=12>
+<DataTable data={orders_by_month} rows=6>
   <Column id=order_month fmt=mmmm-yy/>
-  <Column id=number_of_orders />
   <Column id=sales fmt=usd0 />
+  <Column id=number_of_orders />
   <Column id=average_order_value fmt=usd2 />
 </DataTable>
 
 
-<BigLink href="https://docs.evidence.dev/components/all-components">See All Components &rarr;</BigLink>
+> **More:** See [all components](https://docs.evidence.dev/components/all-components)
 
+## Control Output With If and Loops
 
+[Use `{#if}` statements and `{#each}` loops](/control-statements) to determine what text and data is displayed.
 
-## Drill Down with Templated Pages
-
-```sql categories
-select category
-from orders
-group by 1
-```
-
-Click on a category to see a more detailed page.
-
-<DataTable data={categories} link=category showLinkCol/>
-
-
-## Choose what to Display with Control Logic
-
-Use if statements & loops to determine what text and data is displayed.
-
-<BigLink href="/control-logic">Using Control Logic &rarr;</BigLink>
-
-# Share Data with your Team
+# Share Data with Evidence Cloud
 
 Evidence Cloud is the easiest way to securely share your data. 
 - Get your project online
