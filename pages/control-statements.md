@@ -15,21 +15,13 @@ order by 2 desc
 
 `{#each}` statements loop through **each row** of a query, and generate text and charts.
 
-
-
 ## Sales by Category
 
 {#each category_sales as category_row}
 -  <Value data={category_row} column=category/>: 
-<Value data={category_row} column=number_of_orders/> orders, 
+<Value data={category_row} column=number_of_orders/> orders
 
 {/each}
-
----
-
-> **Try:** Add the following after `orders,` to show the sales per category:
->
-> `<Value data={category_row} column=sales fmt=usd0k/> sales`
 
 # If Statements
 
@@ -45,7 +37,6 @@ limit 7
 ```
 
 `{#if}` and `{:else}` statements control what content is shown to users based on custom logic.
-
 
 ## Sales vs Target, <Value data={orders_per_day} column=date row=0 fmt="mmm-dd" />
 
@@ -63,10 +54,5 @@ Missed sales target:
 😞
 
 {/if}
-
----
-
-
-> **Try:** Replace occurrences of `0` with `1` in the section above to see if the sales target was met on Dec-30.
 
 Loops and logic are often to powerful to combine - loop through data and only display data if certain conditions are met.
