@@ -36,7 +36,7 @@ You can see both the SQL and the query results by interacting with the query abo
 > **Try:** Edit the above query to display all years of data by removing
 > `where order_datetime >= '2020-01-01'`
 
-## Show Data with Components
+## Visualize Data with Components
 
 ### Value in Text
 
@@ -75,11 +75,11 @@ Last month customers placed **<Value data={orders_by_month} column=number_of_ord
 
 ## Control Output With If and Loops
 
-[Use `{#if}` statements and `{#each}` loops](/control-statements) to determine what text and data is displayed.
+[Use `{#if}` statements and `{#each}` loops](/control-statements) to dynamically choose what text and data is displayed.
 
-# Share Data with Evidence Cloud
+# Share with Evidence Cloud
 
-Evidence Cloud is the easiest way to securely share your data. 
+Evidence Cloud is the easiest way to securely share your project. 
 - Get your project online
 - Authenticate users
 - Schedule data refreshes
