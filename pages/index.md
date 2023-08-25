@@ -16,9 +16,7 @@ _Build polished data products with SQL and Markdown_
 Evidence renders markdown files into web pages. This page is:
 `[project]/pages/index.md`.
 
-> **Try:**  Open this file, change some text and save it to see this page update instantly.
-
-## Run SQL using Code Fences ` ``` `
+## Run SQL using Code Fences ` ```sql `
 
 ```sql orders_by_month
 select
@@ -33,8 +31,6 @@ group by 1 order by 1 desc
 
 You can see both the SQL and the query results by interacting with the query above.
 
-> **Try:** Edit the above query to display all years of data by removing
-> `where order_datetime >= '2020-01-01'`
 
 ## Visualize Data with Components
 
@@ -46,10 +42,8 @@ Last month customers placed **<Value data={orders_by_month} column=number_of_ord
 <BigValue data={orders_by_month} value=sales fmt=usd0/>
 <BigValue data={orders_by_month} value=number_of_orders />
 
-> **Try:** Add another `<BigValue/>` showing `average_order_value`.
 
 ### Bar Chart
-
 
 <BarChart 
   data={orders_by_month} 
@@ -69,7 +63,6 @@ Last month customers placed **<Value data={orders_by_month} column=number_of_ord
   <Column id=number_of_orders />
   <Column id=average_order_value fmt=usd2 title="Avg. Order Value"/>
 </DataTable>
-
 
 > **More:** See [all components](https://docs.evidence.dev/components/all-components)
 
