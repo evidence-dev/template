@@ -8,7 +8,7 @@ _Build polished data products with SQL and Markdown_
   data={orders_by_month}
   y=sales
   yFmt=usd0k
-  title = 'Sales by Month, USD'
+  title = "Sales by Month, USD"
 />
 
 ## Write in Markdown
@@ -51,17 +51,21 @@ Last month customers placed **<Value data={orders_by_month} column=number_of_ord
 ### Bar Chart
 
 
-<BarChart data={orders_by_month} y=number_of_orders />
+<BarChart 
+  data={orders_by_month} 
+  y=number_of_orders 
+  fillColor="#488f96"
+/>
 
 > **Try:** Change the chart to a `<LineChart>`.
 
 ### Data Table
 
 <DataTable data={orders_by_month} rows=6>
-  <Column id=order_month fmt=mmmm-yy/>
+  <Column id=order_month fmt=mmmm-yy title="Month"/>
   <Column id=sales fmt=usd0 />
   <Column id=number_of_orders />
-  <Column id=average_order_value fmt=usd2 />
+  <Column id=average_order_value fmt=usd2 title="Avg. Order Value"/>
 </DataTable>
 
 
