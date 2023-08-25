@@ -55,7 +55,9 @@ Last month customers placed **<Value data={orders_by_month} column=number_of_ord
   data={orders_by_month} 
   y=number_of_orders 
   fillColor="#488f96"
-/>
+>
+  <ReferenceArea xMin="2020-03-15" xMax="2021-05-15" label="COVID Impacted" color=red/>
+</BarChart>
 
 > **Try:** Change the chart to a `<LineChart>`.
 
