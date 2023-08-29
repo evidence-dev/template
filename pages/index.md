@@ -4,7 +4,7 @@ title: Welcome to Evidence
 
 _Build polished data products with SQL and Markdown_
 
-This data in this demo comes from the local file `needful_things.duckdb`.
+Data in this demo is from the local DuckDB file `needful_things.duckdb`.
 
 <LineChart
   data={orders_by_month}
