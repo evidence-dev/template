@@ -21,7 +21,7 @@ Don't clone this repo, just download the code using the steps above.
 
 ## Codespaces
 
-If you are using this template in Codespaces, use the following commands to get started:
+If you are using this template in Codespaces, click the Start Evidence button in the bottom left toolbar, or use the following commands to get started:
 
 ```shell
 npm install
