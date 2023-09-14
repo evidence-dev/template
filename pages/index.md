@@ -18,7 +18,7 @@ Data in this demo is from the local DuckDB file `needful_things.duckdb`.
 Evidence renders markdown files into web pages. This page is:
 `[project]/pages/index.md`.
 
-## Run SQL using Code Fences ` ```sql `
+## Run SQL using Code Fences
 
 ```sql orders_by_month
 select
@@ -31,7 +31,9 @@ where order_datetime >= '2020-01-01'
 group by 1 order by 1 desc
 ```
 
-You can see both the SQL and the query results by interacting with the query above.
+In your markdown file, you can include SQL queries in code fences. Evidence will run these queries through your database and return the results to the page.
+
+To see the queries on a page, click the 3-dot menu at the top right of the page and Show Queries. You can see both the SQL and the query results by interacting with the query above.
 
 
 ## Visualize Data with Components
