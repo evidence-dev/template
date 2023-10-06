@@ -4,7 +4,7 @@ title: Welcome to Evidence
 
 _Build polished data products with SQL and Markdown_
 
-Data in this demo is from the local DuckDB file `needful_things.duckdb`.
+This demo [connects](/settings) to a local DuckDB file `needful_things.duckdb`.
 
 <LineChart
   data={orders_by_month}
@@ -61,18 +61,9 @@ Last month customers placed **<Value data={orders_by_month} column=number_of_ord
 
 ### Data Table
 
-<DataTable data={orders_by_month} rows=6>
-  <Column id=order_month fmt=mmmm-yy title="Month"/>
-  <Column id=sales fmt=usd0 />
-  <Column id=number_of_orders />
-  <Column id=average_order_value fmt=usd2 title="Avg. Order Value"/>
-</DataTable>
+<DataTable data={orders_by_month} rows=6/>
 
 > **More:** See [all components](https://docs.evidence.dev/components/all-components)
-
-## Control Output With If and Loops
-
-[Use `{#if}` statements and `{#each}` loops](/control-statements) to dynamically choose what text and data is displayed.
 
 # Share with Evidence Cloud
 
@@ -81,12 +72,12 @@ Evidence Cloud is the easiest way to securely share your project.
 - Authenticate users
 - Schedule data refreshes
 
-<BigLink href=/settings#deployment>Deploy to Evidence Cloud &rarr;</BigLink>
+  <BigLink href='https://du3tapwtcbi.typeform.com/waitlist?utm_source=cloud-page&typeform-source=evidence.dev'>Deploy to Evidence Cloud &rarr;</BigLink>
 
 You can use Netlify, Vercel or another static hosting provider to [self-host Evidence](https://docs.evidence.dev/deployment/overview).
 
 # Get Support
 
-- Message us on [Slack](https://join.slack.com/t/evidencedev/shared_invite/zt-uda6wp6a-hP6Qyz0LUOddwpXW5qG03Q)
+- Message us on [Slack](https://slack.evidence.dev/)
 - Read the [Docs](https://docs.evidence.dev/)
 - Open an issue on [Github](https://github.com/evidence-dev/evidence)
