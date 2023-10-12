@@ -1,83 +1,26 @@
----
-title: Welcome to Evidence
----
+<script>
+    import {browser} from "$app/environment";
+</script>
 
-_Build polished data products with SQL and Markdown_
+# Welcome to Evidence
 
-This demo [connects](/settings) to a local DuckDB file `needful_things.duckdb`.
+## Filtered Component
 
-<LineChart
-  data={orders_by_month}
-  y=sales
-  yFmt=usd0k
-  title = "Sales by Month, USD"
-/>
-
-## Write in Markdown
-
-Evidence renders markdown files into web pages. This page is:
-`[project]/pages/index.md`.
-
-## Run SQL using Code Fences
-
-```sql orders_by_month
+```sql items
 select
-  date_trunc('month', order_datetime) as order_month,
-  count(*) as number_of_orders,
-  sum(sales) as sales,
-  sum(sales)/count(*) as average_order_value
+    email,
+    channel,
+    sum(sales) as sales_usd
 from orders
-where order_datetime >= '2020-01-01'
-group by 1 order by 1 desc
+group by 1,2
 ```
 
-In your markdown file, you can include SQL queries in code fences. Evidence will run these queries through your database and return the results to the page.
+{#if browser && $page.url.searchParams.get('channel')} <!-- Check for a filter in the URL -->
 
-To see the queries on a page, click the 3-dot menu at the top right of the page and Show Queries. You can see both the SQL and the query results by interacting with the query above.
+<DataTable data={items.filter(d=>d.channel === $page.url.searchParams.get('channel'))}/>
 
+{:else}
 
-## Visualize Data with Components
+<DataTable data={items}/>
 
-### Value in Text
-
-Last month customers placed **<Value data={orders_by_month} column=number_of_orders/>** orders. The AOV was **<Value data={orders_by_month} column=average_order_value fmt=usd2/>**.
-
-### Big Value 
-<BigValue data={orders_by_month} value=sales fmt=usd0/>
-<BigValue data={orders_by_month} value=number_of_orders />
-
-
-### Bar Chart
-
-<BarChart 
-  data={orders_by_month} 
-  y=number_of_orders 
-  fillColor="#488f96"
->
-  <ReferenceArea xMin="2020-03-15" xMax="2021-05-15" label="COVID Impacted" color=red/>
-</BarChart>
-
-> **Try:** Change the chart to a `<LineChart>`.
-
-### Data Table
-
-<DataTable data={orders_by_month} rows=6/>
-
-> **More:** See [all components](https://docs.evidence.dev/components/all-components)
-
-# Share with Evidence Cloud
-
-Evidence Cloud is the easiest way to securely share your project. 
-- Get your project online
-- Authenticate users
-- Schedule data refreshes
-
-  <BigLink href='https://du3tapwtcbi.typeform.com/waitlist?utm_source=cloud-page&typeform-source=evidence.dev'>Deploy to Evidence Cloud &rarr;</BigLink>
-
-You can use Netlify, Vercel or another static hosting provider to [self-host Evidence](https://docs.evidence.dev/deployment/overview).
-
-# Get Support
-
-- Message us on [Slack](https://slack.evidence.dev/)
-- Read the [Docs](https://docs.evidence.dev/)
-- Open an issue on [Github](https://github.com/evidence-dev/evidence)
+{/if}
