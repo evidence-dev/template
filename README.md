@@ -36,7 +36,8 @@ tl;dr:
 
 ## Getting started
 
-1. Clone this repo and checkout the `next` branch 
+1. Clone this repo and checkout the `next` branch
+1. Run `npm install` 
 1. Run `npm run build:sources`
 1. Run `npm run dev` 
 
