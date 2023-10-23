@@ -31,6 +31,10 @@ where order_datetime >= '2020-01-01'
 group by 1 order by 1 desc
 ```
 
+```test
+select * from orders limit 10
+```
+
 In your markdown file, you can include SQL queries in code fences. Evidence will run these queries through your database and return the results to the page.
 
 To see the queries on a page, click the 3-dot menu at the top right of the page and Show Queries. You can see both the SQL and the query results by interacting with the query above.
@@ -72,7 +76,7 @@ Evidence Cloud is the easiest way to securely share your project.
 - Authenticate users
 - Schedule data refreshes
 
-  <BigLink href='https://du3tapwtcbi.typeform.com/waitlist?utm_source=cloud-page&typeform-source=evidence.dev'>Deploy to Evidence Cloud &rarr;</BigLink>
+<BigLink href='https://du3tapwtcbi.typeform.com/waitlist?utm_source=cloud-page&typeform-source=evidence.dev'>Deploy to Evidence Cloud &rarr;</BigLink>
 
 You can use Netlify, Vercel or another static hosting provider to [self-host Evidence](https://docs.evidence.dev/deployment/overview).
 
