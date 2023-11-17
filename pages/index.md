@@ -33,8 +33,9 @@ group by 1 order by 1 desc
 
 In your markdown file, you can include SQL queries in code fences. Evidence will run these queries through your database and return the results to the page.
 
+<Alert status=info>  
 To see the queries on a page, click the 3-dot menu at the top right of the page and Show Queries. You can see both the SQL and the query results by interacting with the query above.
-
+</Alert>
 
 ## Visualize Data with Components
 
