@@ -28,3 +28,11 @@ components:
   # For more info: https://docs.evidence.dev/plugins/using-plugins/
 databases:
   @evidence-dev/faker-datasource: { }
+  @evidence-dev/bigquery: { }
+  @evidence-dev/csv: { }
+  @evidence-dev/duckdb: { }
+  @evidence-dev/mssql: { }
+  @evidence-dev/mysql: { }
+  @evidence-dev/postgres: { }
+  @evidence-dev/snowflake: { }
+  @evidence-dev/sqlite: { }
