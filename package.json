@@ -6,7 +6,7 @@
     "build:strict": "evidence build:strict",
     "dev": "evidence dev --open /",
     "test": "evidence build",
-    "build:sources": "evidence build:sources"
+    "sources": "evidence sources"
   },
   "engines": {
     "npm": ">=7.0.0",
@@ -17,7 +17,15 @@
     "@evidence-dev/core-components": "usql",
     "@evidence-dev/evidence": "usql",
     "@evidence-dev/faker-datasource": "usql",
-    "@evidence-dev/usql-datatable": "^1.0.2"
+    "@evidence-dev/usql-datatable": "^1.0.2",
+    "@evidence-dev/bigquery": "usql",
+    "@evidence-dev/csv": "usql",
+    "@evidence-dev/duckdb": "usql",
+    "@evidence-dev/mssql": "usql",
+    "@evidence-dev/mysql": "usql",
+    "@evidence-dev/postgres": "usql",
+    "@evidence-dev/snowflake": "usql",
+    "@evidence-dev/sqlite": "usql"
   },
   "overrides": {
     "jsonwebtoken": "9.0.0",
