@@ -142,7 +142,7 @@ If you want to use your own data, you can add connectors to the project. See ins
 Install as a dependency:
 
 ```shell
-npm i -s @evidence-dev/bigquery@usql
+npm i -s @evidence-dev/bigquery
 ```
 
 Add to `evidence.plugins.yaml`
@@ -160,7 +160,7 @@ databases:
 | Option        | Type                                            | Note                                     |
 | ------------- | ----------------------------------------------- | ---------------------------------------- |
 | project_id    | string                                          |                                          |
-| authenticator | one of 'service-account', 'oauth', 'gcloud-cli' |                                          |
+| authenticator | one of `'service-account'`, `'oauth'`, `'gcloud-cli'` |                                    |
 | client_email  | string                                          | Only for `service-account` authenticator |
 | private_key   | string                                          | Only for `service-account` authenticator |
 | token         | string                                          | Only for `oauth` authenticator           |
@@ -219,7 +219,7 @@ Add to `evidence.plugins.yaml`
 # ...
 databases:
     # ...
-    @evidence-dev/duckdb: { }
+    @evidence-dev/faker-datasource: { }
     # ...
 ```
 
@@ -275,7 +275,7 @@ Add to `evidence.plugins.yaml`
 # ...
 databases:
     # ...
-    @evidence-dev/mssql: { }
+    @evidence-dev/mysql: { }
     # ...
 ```
 
@@ -307,7 +307,7 @@ Add to `evidence.plugins.yaml`
 # ...
 databases:
     # ...
-    @evidence-dev/mssql: { }
+    @evidence-dev/postgres: { }
     # ...
 ```
 
@@ -351,7 +351,7 @@ databases:
 | Option        | Type                                              | Note                                       |
 | ------------- | ------------------------------------------------- | ------------------------------------------ |
 | project_id    | string                                            |                                            |
-| authenticator | one of 'snowflake_jwt', 'externalBrowser', 'okta' |                                            |
+| authenticator | one of `'snowflake_jwt'`, `'externalBrowser'`, `'okta'` |                                      |
 | account       | string                                            |                                            |
 | username      | string                                            |                                            |
 | database      | string                                            |                                            |
