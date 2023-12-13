@@ -2,9 +2,5 @@
 	{
 		"action": "remove",
 		"files": [".github", ".devcontainer"]
-	},
-    {
-        "action": "clone",
-        "src": "evidence-dev/default-settings"
-    }
+	}
 ]
