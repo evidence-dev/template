@@ -110,7 +110,7 @@ Once you have built your sources `npm run sources`, and launched the dev server 
 
 You can see the home page, and some example universal SQL queries against the data. 
 
-We have also included a [new schema explorer](http://localhost:3000/explore/schema) at `explore/schema` which lists all of the tables returned by your sources. 
+We have also included a new schema explorer at `explore/schema` which lists all of the tables returned by your sources. 
 
 ### Passing inputs into queries 
 
