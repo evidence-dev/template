@@ -16,8 +16,6 @@
   "dependencies": {
     "@evidence-dev/core-components": "usql",
     "@evidence-dev/evidence": "usql",
-    "@evidence-dev/faker-datasource": "usql",
-    "@evidence-dev/usql-datatable": "^1.0.2",
     "@evidence-dev/bigquery": "usql",
     "@evidence-dev/csv": "usql",
     "@evidence-dev/duckdb": "usql",
