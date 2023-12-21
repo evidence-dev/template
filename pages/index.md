@@ -91,8 +91,6 @@ group by category
     <DropdownOption value=2021/>
 </Dropdown>
 
-# Share with Evidence Cloud
-
 ```sql orders_by_category
 select 
     date_trunc('month', order_datetime) as month,
