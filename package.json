@@ -6,7 +6,7 @@
     "build:strict": "evidence build:strict",
     "build:nostrict": "evidence build",
     "dev": "evidence dev --open /",
-    "test": "evidence build"
+    "test": "evidence build:strict"
   },
   "engines": {
     "npm": ">=7.0.0",
