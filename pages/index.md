@@ -52,6 +52,7 @@ Last month customers placed **<Value data={orders_by_month} column=number_of_ord
 
 <BarChart 
   data={orders_by_month} 
+  x=order_month
   y=number_of_orders 
   fillColor="#488f96"
 >
@@ -66,14 +67,62 @@ Last month customers placed **<Value data={orders_by_month} column=number_of_ord
 
 > **More:** See [all components](https://docs.evidence.dev/components/all-components)
 
+## Add Interactive Features
+
+The latest version of Evidence includes features that allow you to easily create interactive data visualizations.
+
+### Chart with Filter 
+
+```sql categories
+select
+    category
+from orders
+group by category
+```
+
+<Dropdown data={categories} name=category value=category>
+    <DropdownOption value="%" valueLabel="All Categories"/>
+</Dropdown>
+
+<Dropdown name=year>
+    <DropdownOption value=% valueLabel="All Years"/>
+    <DropdownOption value=2019/>
+    <DropdownOption value=2020/>
+    <DropdownOption value=2021/>
+</Dropdown>
+
+```sql orders_by_category
+select 
+    date_trunc('month', order_datetime) as month,
+    sum(sales) as sales_usd,
+    category
+from orders
+where category like '${inputs.category}'
+and date_part('year', order_datetime) like '${inputs.year}'
+group by all
+order by sales_usd desc
+```
+
+<BarChart
+    data={orders_by_category}
+    title="Sales by Month, {inputs.category}"
+    x=month
+    y=sales_usd
+    series=category
+/>
+
+
+
+
 # Share with Evidence Cloud
 
 Evidence Cloud is the easiest way to securely share your project. 
+
 - Get your project online
 - Authenticate users
 - Schedule data refreshes
 
-  <BigLink href='https://du3tapwtcbi.typeform.com/waitlist?utm_source=cloud-page&typeform-source=evidence.dev'>Deploy to Evidence Cloud &rarr;</BigLink>
+<BigLink href='https://du3tapwtcbi.typeform.com/waitlist?utm_source=template&typeform-source=template'>Deploy to Evidence Cloud &rarr;</BigLink>
 
 You can use Netlify, Vercel or another static hosting provider to [self-host Evidence](https://docs.evidence.dev/deployment/overview).
 
