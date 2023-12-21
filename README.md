@@ -39,6 +39,15 @@ See [the CLI docs](https://docs.evidence.dev/cli/) for more command information.
 
 **Note:** Codespaces is much faster on the Desktop app. After the Codespace has booted, select the hamburger menu → Open in VS Code Desktop.
 
+## Connection Issues
+
+If you see `✗ orders_by_month Missing database credentials`, you need to add the connection to the demo database:
+
+1. Open the settings menu at [localhost:3000/settings](http://localhost:3000/settings)
+2. select `DuckDB`
+3. enter `needful_things`
+4. select `.duckdb` and save
+
 ## Learning More
 
 - [Docs](https://docs.evidence.dev/)

@@ -5,3 +5,4 @@ node_modules
 .DS_Store
 static/data
 *.options.yaml
+.vscode/settings.json

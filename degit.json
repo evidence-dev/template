@@ -1,6 +1,10 @@
 [
 	{
 		"action": "remove",
-		"files": [".github", ".devcontainer"]
-	}
+		"files": [".devcontainer"]
+	},
+    {
+        "action": "clone",
+        "src": "evidence-dev/default-settings"
+    }
 ]

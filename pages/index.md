@@ -1,4 +1,6 @@
-# Welcome to Evidence
+---
+title: Welcome to Evidence
+---
 
 _Build polished data products with SQL and Markdown_
 
@@ -89,6 +91,7 @@ group by category
     <DropdownOption value=2021/>
 </Dropdown>
 
+# Share with Evidence Cloud
 
 ```sql orders_by_category
 select 
