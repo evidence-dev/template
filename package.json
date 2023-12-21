@@ -14,16 +14,16 @@
   },
   "type": "module",
   "dependencies": {
-    "@evidence-dev/core-components": "usql",
-    "@evidence-dev/evidence": "usql",
-    "@evidence-dev/bigquery": "usql",
-    "@evidence-dev/csv": "usql",
-    "@evidence-dev/duckdb": "usql",
-    "@evidence-dev/mssql": "usql",
-    "@evidence-dev/mysql": "usql",
-    "@evidence-dev/postgres": "usql",
-    "@evidence-dev/snowflake": "usql",
-    "@evidence-dev/sqlite": "usql"
+    "@evidence-dev/bigquery": "^2.0.1",
+    "@evidence-dev/core-components": "^3.0.2",
+    "@evidence-dev/csv": "^1.0.2",
+    "@evidence-dev/duckdb": "^1.0.2",
+    "@evidence-dev/evidence": "^24.0.4",
+    "@evidence-dev/mssql": "^1.0.1",
+    "@evidence-dev/mysql": "^1.0.1",
+    "@evidence-dev/postgres": "^1.0.1",
+    "@evidence-dev/snowflake": "^1.0.1",
+    "@evidence-dev/sqlite": "^2.0.1"
   },
   "overrides": {
     "jsonwebtoken": "9.0.0",
