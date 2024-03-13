@@ -97,15 +97,15 @@ select
     sum(sales) as sales_usd,
     category
 from orders
-where category like '${inputs.category.value}'
-and date_part('year', order_datetime) like '${inputs.year.value}'
+where category like '${inputs.category}'
+and date_part('year', order_datetime) like '${inputs.year}'
 group by all
 order by sales_usd desc
 ```
 
 <BarChart
     data={orders_by_category}
-    title="Sales by Month, {inputs.category.label}"
+    title="Sales by Month, {inputs.category}"
     x=month
     y=sales_usd
     series=category
