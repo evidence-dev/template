@@ -111,9 +111,6 @@ order by sales_usd desc
     series=category
 />
 
-
-
-
 # Share with Evidence Cloud
 
 Evidence Cloud is the easiest way to securely share your project. 
