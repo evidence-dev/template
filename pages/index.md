@@ -26,7 +26,7 @@ select
   count(*) as number_of_orders,
   sum(sales) as sales,
   sum(sales)/count(*) as average_order_value
-from orders
+from needful_things.orders
 where order_datetime >= '2020-01-01'
 group by 1 order by 1 desc
 ```
@@ -76,7 +76,7 @@ The latest version of Evidence includes features that allow you to easily create
 ```sql categories
 select
     category
-from orders
+from needful_things.orders
 group by category
 ```
 
@@ -96,7 +96,7 @@ select
     date_trunc('month', order_datetime) as month,
     sum(sales) as sales_usd,
     category
-from orders
+from needful_things.orders
 where category like '${inputs.category.value}'
 and date_part('year', order_datetime) like '${inputs.year.value}'
 group by all
