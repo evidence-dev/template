@@ -119,7 +119,7 @@ Evidence Cloud is the easiest way to securely share your project.
 - Authenticate users
 - Schedule data refreshes
 
-<BigLink href='https://du3tapwtcbi.typeform.com/waitlist?utm_source=template&typeform-source=template'>Deploy to Evidence Cloud &rarr;</BigLink>
+<BigLink href='https://evidence.dev/cloud'>Deploy to Evidence Cloud &rarr;</BigLink>
 
 You can use Netlify, Vercel or another static hosting provider to [self-host Evidence](https://docs.evidence.dev/deployment/overview).
 
