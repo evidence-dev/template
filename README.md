@@ -2,7 +2,7 @@
 
 ## Using Codespaces
 
-If you are using this template in Codespaces, click the `Start Evidence` button in the bottom status bar.
+If you are using this template in Codespaces, click the `Start Evidence` button in the bottom status bar. This will install dependencies and open a preview of your project in your browser - you should get a popup prompting you to open in browser.
 
 Or you can use the following commands to get started:
 
