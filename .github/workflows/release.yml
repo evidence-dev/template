@@ -46,7 +46,7 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           artifacts: evidence-${{ matrix.os }}-${{ matrix.arch }}-node${{ matrix.node }}.zip
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_ACTIONS_RELEASE_TOKEN }}
           tag: ${{ github.ref }}
           name: Release ${{ github.ref }}
           body: |
