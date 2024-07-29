@@ -44,13 +44,14 @@ jobs:
           fi     
 
       - name: Upload to GH release
-        uses: softprops/action-gh-release@v1
+        uses: ncipollo/release-action@v1
         with:
-          files: evidence-${{ matrix.os }}-${{ matrix.arch }}-node${{ matrix.node }}.zip
+          artifacts: evidence-${{ matrix.os }}-${{ matrix.arch }}-node${{ matrix.node }}.zip
           token: ${{ secrets.GH_ACTIONS_RELEASE_TOKEN }}
-          tag_name: ${{ github.ref }}
+          tag: ${{ github.ref }}
           name: Release ${{ github.ref }}
           body: |
             Release for ${{ matrix.os }} ${{ matrix.arch }} with Node.js ${{ matrix.node }}
           draft: false
           prerelease: false
+          allowUpdates: true # This allows updating existing releases
