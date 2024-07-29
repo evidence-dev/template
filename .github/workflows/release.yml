@@ -35,9 +35,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build project
-        run: npm run build # if you have a build step
-
       - name: Zip files
         run: |
           if [ "${{ runner.os }}" == "Windows" ]; then
