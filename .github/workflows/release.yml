@@ -10,10 +10,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        node: [18, 20]
-        arch: [x86_64, arm64]
         include:
+          # MacOS
           - os: macos-latest
             arch: x86_64
             node: 18
@@ -26,6 +24,7 @@ jobs:
           - os: macos-latest
             arch: arm64
             node: 20
+          # Ubuntu
           - os: ubuntu-latest
             arch: x86_64
             node: 18
@@ -38,6 +37,7 @@ jobs:
           - os: ubuntu-latest
             arch: arm64
             node: 20
+          # Windows
           - os: windows-latest
             arch: x86_64
             node: 18
