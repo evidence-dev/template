@@ -41,7 +41,7 @@ jobs:
             powershell.exe -Command "Compress-Archive -Path . -DestinationPath evidence-${{ matrix.os }}-${{ matrix.arch }}-node${{ matrix.node }}.zip -Force"
           else
             zip -r evidence-${{ matrix.os }}-${{ matrix.arch }}-node${{ matrix.node }}.zip . -x "*.git*"
-          
+          fi     
       - name: Upload to GH release
         uses: ncipollo/release-action@v1
         with:
