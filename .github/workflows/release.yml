@@ -1,0 +1,56 @@
+name: Package and Release
+
+on:
+  push:
+    # tags:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node: [18, 20]
+        include:
+          - os: macos-latest
+            arch: x86_64
+          - os: macos-latest
+            arch: arm64
+          - os: ubuntu-latest
+            arch: x86_64
+          - os: ubuntu-latest
+            arch: arm64
+          - os: windows-latest
+            arch: x86_64
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js ${{ matrix.node }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build # if you have a build step
+
+      - name: Zip files
+        run: |
+          if [ "${{ runner.os }}" == "Windows" ]; then
+            powershell.exe -Command "Compress-Archive -Path . -DestinationPath evidence-${{ matrix.os }}-${{ matrix.arch }}-node${{ matrix.node }}.zip -Force"
+          else
+            zip -r evidence-${{ matrix.os }}-${{ matrix.arch }}-node${{ matrix.node }}.zip . -x "*.git*"
+          
+      - name: Upload to GH release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: evidence-${{ matrix.os }}-${{ matrix.arch }}-node${{ matrix.node }}.zip
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref }}
+          name: Release ${{ github.ref }}
+          body: |
+            Release for ${{ matrix.os }} ${{ matrix.arch }} with Node.js ${{ matrix.node }}
