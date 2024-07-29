@@ -37,7 +37,7 @@ jobs:
 
       - name: Zip files
         run: |
-          if [[ "${{ runner.os }}" == "Windows" ]]; then
+          if [ "${{ runner.os }}" == "Windows" ]; then
             powershell.exe -Command "Compress-Archive -Path . -DestinationPath evidence-${{ matrix.os }}-${{ matrix.arch }}-node${{ matrix.node }}.zip -Force"
           else
             zip -r evidence-${{ matrix.os }}-${{ matrix.arch }}-node${{ matrix.node }}.zip . -x "*.git*"
