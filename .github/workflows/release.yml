@@ -2,7 +2,7 @@ name: Package and Release
 
 on:
   push:
-    tag:
+    tags:
       - '*'
 
 jobs:
