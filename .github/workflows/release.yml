@@ -6,26 +6,8 @@ on:
       - '*'
 
 jobs:
-  create_release:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Create GitHub Release
-        uses: ncipollo/release-action@v1
-        with:
-          token: ${{ secrets.GH_ACTIONS_RELEASE_TOKEN }}
-          tag: ${{ github.ref }}
-          name: Release ${{ github.ref_name }}
-          body: Initial release creation
-          draft: false
-          prerelease: false
-          allowUpdates: true
-
   build:
     runs-on: ${{ matrix.os }}
-    needs: create_release
     strategy:
       matrix:
         include:
@@ -82,14 +64,33 @@ jobs:
         if: runner.os != 'Windows'
         run: zip -r evidence-${{ matrix.os }}-${{ matrix.arch }}-node${{ matrix.node }}.zip . -x "*.git*"
 
-      - name: Upload to GH release
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: evidence-${{ matrix.os }}-${{ matrix.arch }}-node${{ matrix.node }}
+          path: evidence-${{ matrix.os }}-${{ matrix.arch }}-node${{ matrix.node }}.zip
+
+  release:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@v2
+        with:
+          path: .
+
+      - name: Create or Update GitHub Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: evidence-${{ matrix.os }}-${{ matrix.arch }}-node${{ matrix.node }}.zip
+          artifacts: '**/evidence-*.zip'
           token: ${{ secrets.GH_ACTIONS_RELEASE_TOKEN }}
           tag: ${{ github.ref }}
           name: Release ${{ github.ref_name }}
-          body: Release for ${{ github.ref_name }}
+          body: |
+            Release for ${{ github.ref_name }} with artifacts.
           draft: false
           prerelease: false
           allowUpdates: true
