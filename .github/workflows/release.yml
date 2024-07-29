@@ -70,8 +70,6 @@ jobs:
           artifacts: evidence-${{ matrix.os }}-${{ matrix.arch }}-node${{ matrix.node }}.zip
           token: ${{ secrets.GH_ACTIONS_RELEASE_TOKEN }}
           name: Release ${{ github.ref_name }}
-          body: |
-            Release for ${{ matrix.os }} ${{ matrix.arch }} with Node.js ${{ matrix.node }}
           draft: false
           prerelease: false
           allowUpdates: true
