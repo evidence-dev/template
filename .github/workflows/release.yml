@@ -42,12 +42,15 @@ jobs:
           else
             zip -r evidence-${{ matrix.os }}-${{ matrix.arch }}-node${{ matrix.node }}.zip . -x "*.git*"
           fi     
+
       - name: Upload to GH release
-        uses: ncipollo/release-action@v1
+        uses: softprops/action-gh-release@v1
         with:
-          artifacts: evidence-${{ matrix.os }}-${{ matrix.arch }}-node${{ matrix.node }}.zip
+          files: evidence-${{ matrix.os }}-${{ matrix.arch }}-node${{ matrix.node }}.zip
           token: ${{ secrets.GH_ACTIONS_RELEASE_TOKEN }}
-          tag: ${{ github.ref }}
-          name: Release ${{ github.ref }}
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
           body: |
             Release for ${{ matrix.os }} ${{ matrix.arch }} with Node.js ${{ matrix.node }}
+          draft: false
+          prerelease: false
