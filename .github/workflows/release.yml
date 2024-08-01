@@ -92,7 +92,9 @@ jobs:
           tag: ${{ github.ref }}
           name: Release ${{ github.ref_name }}
           body: |
-            Release for ${{ github.ref_name }} with artifacts.
+            Preinstalled templates for ${{ github.ref_name }}.
+            These may be useful if you cannot access the npm registry (e.g. in a secure environment).
+            Otherwise, use the install instructions in the readme.
           draft: false
           prerelease: false
           allowUpdates: true
