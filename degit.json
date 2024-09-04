@@ -1,6 +1,9 @@
 [
 	{
 		"action": "remove",
-		"files": [".devcontainer"]
+		"files": [
+			".devcontainer",
+			".github"
+		]
 	}
 ]
