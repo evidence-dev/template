@@ -3,7 +3,8 @@
 		"action": "remove",
 		"files": [
 			".devcontainer",
-			".github"
+			".github",
+			"scripts"
 		]
 	}
 ]
