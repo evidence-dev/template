@@ -1,8 +1,8 @@
-# Evidence Template Project
+# Evidence Template App
 
 ## Using Codespaces
 
-If you are using this template in Codespaces, click the `Start Evidence` button in the bottom status bar. This will install dependencies and open a preview of your project in your browser - you should get a popup prompting you to open in browser.
+If you are using this template in Codespaces, click the `Start Evidence` button in the bottom status bar. This will install dependencies and open a preview of your app in your browser - you should get a popup prompting you to open in browser.
 
 Or you can use the following commands to get started:
 
@@ -29,8 +29,8 @@ The easiest way to get started is using the [VS Code Extension](https://marketpl
 ## Get Started using the CLI
 
 ```bash
-npx degit evidence-dev/template my-project
-cd my-project 
+npx degit evidence-dev/template my-app
+cd my-app 
 npm install 
 npm run sources
 npm run dev 
