@@ -4,7 +4,7 @@ title: Welcome to Evidence
 
 <Details title='How to edit this page'>
 
-  This page can be found in your project at `/pages/index.md`. Make a change to the markdown file and save it to see the change take effect in your browser.
+  This page can be found in your app directory at `/pages/index.md`. Make a change to the markdown file and save it to see the change take effect in your browser.
 </Details>
 
 ```sql categories
@@ -48,7 +48,7 @@ title: Welcome to Evidence
 ## What's Next?
 - [Connect your data sources](settings)
 - Edit/add markdown files in the `pages` folder
-- Deploy your project with [Evidence Cloud](https://evidence.dev/cloud)
+- Deploy your app with [Evidence Cloud](https://evidence.dev/cloud)
 
 ## Get Support
 - Message us on [Slack](https://slack.evidence.dev/)
