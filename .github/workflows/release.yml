@@ -64,7 +64,7 @@ jobs:
           find node_modules/.bin -type l -print0 | while IFS= read -r -d '' link; do
             target=$(readlink "$link")
             rm "$link"
-            cp "$target" "$link"
+            cp "$(dirname "$link")/$target" "$link"
           done
 
       - name: Replace symlinks with actual files (Windows)
