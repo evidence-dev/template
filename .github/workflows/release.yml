@@ -58,6 +58,24 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Replace symlinks with actual files (Unix)
+        if: runner.os != 'Windows'
+        run: |
+          find node_modules/.bin -type l -print0 | while IFS= read -r -d '' link; do
+            target=$(readlink "$link")
+            rm "$link"
+            cp "$target" "$link"
+          done
+
+      - name: Replace symlinks with actual files (Windows)
+        if: runner.os == 'Windows'
+        run: |
+          Get-ChildItem -Path node_modules\.bin -Link | ForEach-Object {
+            $Target = (Get-Item $_.FullName).Target
+            Remove-Item $_.FullName
+            Copy-Item $Target $_.FullName
+          }
+
       - name: Zip files (Windows)
         if: runner.os == 'Windows'
         run: powershell.exe -Command "Compress-Archive -Path . -DestinationPath evidence-${{ matrix.os }}-${{ matrix.arch }}-node${{ matrix.node }}.zip -Force"
