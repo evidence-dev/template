@@ -10,7 +10,7 @@
     },
 
     // Use 'postCreateCommand' to run commands after the container is created.
-    "postCreateCommand": "rm .vscode/extensions.json && rmdir .vscode",
+    "postCreateCommand": "rm .vscode/extensions.json && rmdir .vscode && npm install",
     // Configure tool-specific properties
     "customizations": {
       "vscode": {
