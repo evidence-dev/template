@@ -1,7 +1,7 @@
 {
     // This file is only used in Codespaces. If you are developing locally, you can remove the .devcontainer directory without consequences
 
-    "image": "mcr.microsoft.com/devcontainers/javascript-node:0-18-bullseye",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:0-20-bullseye",
 
     "hostRequirements": {
       "cpus": 4,
