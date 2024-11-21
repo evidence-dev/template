@@ -23,7 +23,7 @@ const longestPackageName = Object.keys(initialEvidencePackages).reduce(
 const evidencePackagesWithLatest = Object.keys(initialEvidencePackages)
   .map((dep) => `${dep}@latest`)
   .join(" ");
-const updateCommand = `npm install ${evidencePackagesWithLatest}`;
+const updateCommand = `npm install ${evidencePackagesWithLatest} --package-lock-only`;
 
 // Delete node_modules and package-lock.json
 process.stdout.write("Deleting node_modules and package-lock.json...");
