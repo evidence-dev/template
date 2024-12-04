@@ -19,9 +19,11 @@ plugins:
     "@evidence-dev/trino": { }
     "@evidence-dev/motherduck": { }
 
+appearance:
+  default: system
+  switcher: true
+
 themes:
-  defaultAppearance: system
-  appearanceSwitcher: true
   colors:
     primary:
       light: "#2563eb"
