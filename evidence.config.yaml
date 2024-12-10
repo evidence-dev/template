@@ -2,7 +2,7 @@ appearance:
   default: system
   switcher: true
 
-themes:
+theme:
   colorPalettes:
     default:
       light:
