@@ -74,6 +74,7 @@ plugins:
     "@evidence-dev/mssql": { }
     "@evidence-dev/mysql": { }
     "@evidence-dev/postgres": { }
+    "@evidence-dev/source-javascript": { }
     "@evidence-dev/snowflake": { }
     "@evidence-dev/sqlite": { }
     "@evidence-dev/trino": { }
