@@ -25,6 +25,7 @@
     "@evidence-dev/mssql": "^1.1.2",
     "@evidence-dev/mysql": "^1.1.4",
     "@evidence-dev/postgres": "^1.0.7",
+    "@evidence-dev/source-javascript": "^0.0.2",
     "@evidence-dev/snowflake": "^1.2.2",
     "@evidence-dev/sqlite": "^2.0.7",
     "@evidence-dev/trino": "^1.0.9"
