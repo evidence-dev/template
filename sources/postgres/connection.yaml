@@ -1,0 +1,10 @@
+name: postgres
+type: postgres
+
+options:
+  host: localhost
+  port: 5432
+  user: admin
+  password: admin
+  database: analytics
+  schema: public
