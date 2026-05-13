@@ -1,0 +1,4 @@
+project:
+  name: My Evidence Project
+  evidence: "0.4.3"
+  pages: ./pages

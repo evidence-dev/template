@@ -1,5 +1,5 @@
 {
-  "name": "studio-starter",
+  "name": "my-project",
   "version": "0.0.1",
   "scripts": {
     "build": "echo 'npm run build' is deprecated",
@@ -9,7 +9,5 @@
     "sources:strict": "echo 'npm run sources:strict' is deprecated",
     "preview": "echo 'npm run preview' is deprecated"
   },
-  "type": "module",
-  "dependencies": {
-  }
+  "type": "module"
 }
