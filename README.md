@@ -57,3 +57,6 @@ select 354 as sales, 'Thingys' as product
 /%}
 
 ````
+
+## Credentials
+Credentials for direct connectors live in connection.yaml in the project root. If connection.yaml is not specified the Evidence Warehouse will be used.
