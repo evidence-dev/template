@@ -10,6 +10,18 @@ The latest version of Evidence has some key changes to be better compatible with
   b. SQL now runs ClickHouse SQL, unless you are using a direct connector, in which case it runs native SQL for your warehouse
 4. Sample data is available, run `evidence tables` to see it.
 
+## Install Evidence CLI
+### MacOS / Linux
+```shell
+curl -fsSL https://evidence.studio/install.sh | sh 
+```
+### Windows
+```powershell
+irm https://evidence.studio/install.ps1 | iex
+```
+
+
+
 ## Example: Sample Data
 
 ````markdown
