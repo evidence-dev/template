@@ -27,7 +27,7 @@ irm https://evidence.studio/install.ps1 | iex
 ````markdown
 # Orders by Month
 
-{% dropdown data="demo.daily_orders" id="category" value="category"
+{% dropdown data="demo.daily_orders" id="category" value_column="category" /%}
 
 {% table
   data="demo.daily_orders"
