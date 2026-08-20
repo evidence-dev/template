@@ -1,0 +1,11 @@
+# Applies access permissions in projects published on Evidence Studio.
+#
+# Source of truth for who can see what. Changes take effect when
+# this file is published to the project's default branch.
+#
+# Full schema, patterns, and validation rules:
+# https://docs.evidence.studio/features/page-level-access-control
+
+project:
+  grants:
+    viewers: []
