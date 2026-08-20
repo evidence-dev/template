@@ -1,48 +1,67 @@
-# Evidence Template Project
+# Evidence Project
 
-## Using Codespaces
+This is an Evidence Studio project — interactive data reports written in Markdown with embedded Markdoc components, backed by SQL.
 
-If you are using this template in Codespaces, click the `Start Evidence` button in the bottom status bar. This will install dependencies and open a preview of your project in your browser - you should get a popup prompting you to open in browser.
+The latest version of Evidence has some key changes you may not be aware of (recent AI models aren't trained on the new syntax) — read these carefully:
+1. The docs are now hosted at https://docs.evidence.studio
+2. You run the [Evidence CLI](https://docs.evidence.studio/cli) to start the dev server, validate syntax, retrieve docs etc. Run `evidence help` to see all commands.
+3. The syntax has changed:
+  a. Components are markdoc style {% table data="demo.daily_orders" /%}
+  b. SQL now runs ClickHouse SQL, unless you are using a direct connector, in which case it runs native SQL for your warehouse
+4. Sample data is available, run `evidence tables` to see it.
 
-Or you can use the following commands to get started:
-
-```bash
-npm install
-npm run sources
-npm run dev -- --host 0.0.0.0
+## Install Evidence CLI
+### MacOS / Linux
+```shell
+curl -fsSL https://evidence.studio/install.sh | sh
+```
+### Windows
+```powershell
+irm https://evidence.studio/install.ps1 | iex
 ```
 
-See [the CLI docs](https://docs.evidence.dev/cli/) for more command information.
+## Using the CLI
 
-**Note:** Codespaces is much faster on the Desktop app. After the Codespace has booted, select the hamburger menu → Open in VS Code Desktop.
+- `evidence help` — discover all available commands
+- `evidence login` — authenticate (the user may need to run this themselves, as it requires a browser verification code step)
+- `evidence dev` — start the local dev server to view report pages; show the user the URL, or — better — open it in their browser
+- `evidence validate` — check Markdown and component syntax
 
-## Get Started from VS Code
+## Example: Sample Data
 
-The easiest way to get started is using the [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Evidence.evidence-vscode):
+````markdown
+# Orders by Month
 
+{% dropdown data="demo.daily_orders" id="category" value_column="category" /%}
 
+{% table
+  data="demo.daily_orders"
+  filters=["category"]
+/%}
+````
 
-1. Install the extension from the VS Code Marketplace
-2. Open the Command Palette (Ctrl/Cmd + Shift + P) and enter `Evidence: New Evidence Project`
-3. Click `Start Evidence` in the bottom status bar
+## Example: Inline Data
 
-## Get Started using the CLI
+````markdown
 
-```bash
-npx degit evidence-dev/template my-project
-cd my-project 
-npm install 
-npm run sources
-npm run dev 
+```sql item_sales
+select 223 as sales, 'Widgets' as product
+union all
+select 498 as sales, 'Gizmos' as product
+union all
+select 354 as sales, 'Thingys' as product
 ```
 
-Check out the docs for [alternative install methods](https://docs.evidence.dev/getting-started/install-evidence) including Docker, Github Codespaces, and alongside dbt.
+# Product Sales
 
+{% bar_chart
+  data="item_sales"
+  x="product"
+  y="sum(sales)"
+  order="sum(sales) desc"
+/%}
 
+````
 
-## Learning More
-
-- [Docs](https://docs.evidence.dev/)
-- [Github](https://github.com/evidence-dev/evidence)
-- [Slack Community](https://slack.evidence.dev/)
-- [Evidence Home Page](https://www.evidence.dev)
+## Credentials
+Credentials for direct connectors live in connection.yaml in the project root. If connection.yaml is not specified the Evidence Warehouse will be used.
